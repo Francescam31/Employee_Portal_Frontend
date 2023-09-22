@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Employee from "../components/Employee";
 
 const PortalContainer = () => {
   const [employee, setEmployee] = useState(null);
@@ -16,7 +17,16 @@ const PortalContainer = () => {
 
   console.log(employee);
 
-  return <div></div>;
+  
+  return (
+  <div className="portal-container">
+    <h1>Rainforest Retail</h1>
+    <h2>Employee Portal</h2>
+    {/* <EmployeeList employees={employees}/> Should employees = team */}
+    {employee ? <Employee employee={employee}/> : <p>Loading data...</p>}
+     
+  </div>
+  );
 };
 
 export default PortalContainer;
