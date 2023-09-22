@@ -1,17 +1,25 @@
-import { useState } from "react";
 
-const LoginForm = () => {
+
+const LoginForm = ({login}) => {
     
-    const [email ,setEmail] = useState(
-        {
-            email:""
-        }
-    )
+    
 
-    const [password ,setPassword] = useState(
-        {
-            password:""
-        }
-    )
+    const handleFormSubmit = (event) => {
+        event.preventDefault()
+        
+    }
 
+
+    return (
+        <div>
+            <h1>Login Page</h1>
+            <form>
+                <input name="username" placeholder="Username"/>
+                <input name="password" placeholder="Password"/>
+                <button>Log In</button>
+            </form>
+        </div>
+    )
 }  
+
+export default LoginForm;
