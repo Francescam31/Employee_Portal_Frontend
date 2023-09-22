@@ -2,32 +2,31 @@ import { useEffect, useState } from "react";
 import Employee from "../components/Employee";
 import EmployeeList from "../components/EmployeeList";
 
-const PortalContainer = () => {
-  const [employee, setEmployee] = useState(null);
+const PortalContainer = ({loggedInEmployee}) => {
   // const [team, setTeam] = useState([]);
 
-  const fetchEmployee = async () => {
-    const response = await fetch("http://localhost:8080/employees/1");
-    const data = await response.json();
-    setEmployee(data);
-  };
+//   const fetchEmployee = async () => {
+//     const response = await fetch("http://localhost:8080/employees/1");
+//     const data = await response.json();
+//     setEmployee(data);
+//   };
 
 
-  useEffect(() => {
-    fetchEmployee();
-  }, []);
+//   useEffect(() => {
+//     fetchEmployee();
+//   }, []);
 
-  console.log(employee);
+//   console.log(employee);
   
 
   
   return (
   <div className="portal-container">
-    <h1>Rainforest Retail</h1>
-    <h2>Employee Portal</h2>
-    {/* <EmployeeList employees={employees}/> Should employees = team */}
-    <EmployeeList employee={employee}/>
-    <Employee employee={employee}/> 
+    <h1 className="logo">Rainforest Retail</h1>
+    <h2 className="header">Employee Portal</h2>
+    {/* <EmployeeList employeeloggedInEmployeeyees}/> Should employees = team */}
+    <EmployeeList loggedInEmployee={loggedInEmployee}/>
+    <Employee loggedInEmployee={loggedInEmployee}/> 
      
   </div>
   );

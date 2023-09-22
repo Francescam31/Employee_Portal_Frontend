@@ -1,7 +1,11 @@
+import { useState } from "react";
 
-
-const LoginForm = ({login}) => {
+const LoginForm = ({}) => {
     
+    const [login, setLogin] = useState({
+        email: "",
+        password: "",
+      });
     
 
     const handleFormSubmit = (event) => {
@@ -9,6 +13,9 @@ const LoginForm = ({login}) => {
         
     }
 
+// create function that handles change on the input field
+// onSubmit send fetch request to api
+// set response from fetch via the function passed through here {}
 
     return (
         <div>

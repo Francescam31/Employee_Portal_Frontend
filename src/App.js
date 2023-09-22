@@ -5,15 +5,17 @@ import PortalContainer from "./containers/PortalContainer";
 
 
 function App() {
-  const [login, setLogin] = useState({
-    email: "",
-    password: "",
-  });
+
+  const [loggedInEmployee, setloggedInEmployee] = useState(null);
+
+  //create function that sets loggedInEmployee
+  // pass down function ot loginForm
+  
 
   return (
     <div>
-      <LoginForm login={login} />
-      <PortalContainer />
+      <LoginForm />
+      {loggedInEmployee ? <PortalContainer loggedInEmployee={loggedInEmployee}/> : <p>Please Log in </p>}
     </div>
   );
 }
