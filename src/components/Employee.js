@@ -8,11 +8,12 @@ if(!employee){
 
 return(
     <div className="Employee">
-        <h2>{employee.id}</h2>
-        <h3 className="Employee-name">{employee.name}</h3>
-        <h3 className="Employee-email">{employee.email}</h3>
-        <h3 className="Employee-department-name">{employee.department.name}</h3>
-        <p>{employee.contactNumber}</p>
+        <h4>Employee id: {employee.id}</h4>
+        <h3 className="Employee-name">Name: {employee.name}</h3>
+        <h3 className="Employee-email">Email: {employee.email}</h3>
+        <h3 className="Employee-department-name">Department: {employee.department.name}</h3>
+        <p>Contact Number: {employee.contactNumber}</p>
+        <p>Wage: £{employee.hourlyWage}ph</p>
     </div>
 )
 
