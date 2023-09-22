@@ -23,7 +23,7 @@ const PortalContainer = () => {
     <h1>Rainforest Retail</h1>
     <h2>Employee Portal</h2>
     {/* <EmployeeList employees={employees}/> Should employees = team */}
-    {employee ? <Employee employee={employee}/> : <p>Loading data...</p>}
+    <Employee employee={employee}/> 
      
   </div>
   );
