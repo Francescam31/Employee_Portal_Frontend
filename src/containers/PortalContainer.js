@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Employee from "../components/Employee";
+import EmployeeList from "../components/EmployeeList";
 
 const PortalContainer = () => {
   const [employee, setEmployee] = useState(null);
@@ -24,7 +25,7 @@ const PortalContainer = () => {
   <div className="portal-container">
     <h1>Rainforest Retail</h1>
     <h2>Employee Portal</h2>
-    {/* <EmployeeList employees={employees}/> Should employees = team */}
+    <EmployeeList employee={employee}/>
     <Employee employee={employee}/> 
      
   </div>
