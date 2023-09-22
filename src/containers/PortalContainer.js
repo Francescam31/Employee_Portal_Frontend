@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const PortalContainer = () => {
-  const [employee, setEmployee] = useState("");
+  const [employee, setEmployee] = useState(null);
   const [team, setTeam] = useState([]);
 
   const fetchEmployee = async () => {
@@ -12,8 +12,9 @@ const PortalContainer = () => {
 
   useEffect(() => {
     fetchEmployee();
-    console.log(employee);
   }, []);
+
+  console.log(employee);
 
   return <div></div>;
 };
