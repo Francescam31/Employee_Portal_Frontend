@@ -3,7 +3,7 @@ import Employee from "../components/Employee";
 
 const PortalContainer = () => {
   const [employee, setEmployee] = useState(null);
-  const [team, setTeam] = useState([]);
+  // const [team, setTeam] = useState([]);
 
   const fetchEmployee = async () => {
     const response = await fetch("http://localhost:8080/employees/1");
@@ -11,11 +11,13 @@ const PortalContainer = () => {
     setEmployee(data);
   };
 
+
   useEffect(() => {
     fetchEmployee();
   }, []);
 
   console.log(employee);
+  
 
   
   return (

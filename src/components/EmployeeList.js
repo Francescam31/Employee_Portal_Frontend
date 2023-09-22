@@ -1,26 +1,26 @@
-import { useState, useEffect } from "react"
-import Employee from "./Employee"
 
-const EmployeeList = (employee) => {
-    const [employees, setEmployees] = useState([])
+const EmployeeList = ({employee}) => {
 
 
-    useEffect(() => {
-        const fetchEmployeesByDepartment = async () => {
-            const response = await fetch("http://localhost:8080/employees/department/1");
-            const data = await response.json();
-            setEmployees(data);
-        }
-        console.log(employees)
-        fetchEmployeesByDepartment();
-    },[])
+        // const employeeComponent = employee.department.map(employee => {
+        // return <Employee 
+        // key ={employee.department.id}
+        // employee={employee}/>
+        // });
+   
 
-    
+console.log("Employee List", employee)
+    if(!employee){
+        return <p>Loading data...</p>
+    }
     
 
     return(
-        <></>
+        <>
+        <ul>{employee.department.employees.map((employee, index) => (
+            <li key = {index}>{employee.name}</li>))}</ul>
+        </>
     );
-}
+   }
 
 export default EmployeeList;
