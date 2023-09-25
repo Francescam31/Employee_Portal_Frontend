@@ -25,10 +25,8 @@ const PortalContainer = ({loggedInEmployee}) => {
   <div className="portal-container">
     <h1 className="logo">Rainforest Retail</h1>
     <h2 className="header">Employee Portal</h2>
-    {/* <EmployeeList employeeloggedInEmployeeyees}/> Should employees = team */}
-    <EmployeeList loggedInEmployee={loggedInEmployee}/>
     <Employee loggedInEmployee={loggedInEmployee}/> 
-     
+    <EmployeeList loggedInEmployee={loggedInEmployee}/>  
   </div>
   );
 };

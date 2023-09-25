@@ -19,10 +19,6 @@ function App() {
   return (
     <div>
     <BrowserRouter>
-    <nav>
-    <NavLink to="/"></NavLink>
-    <NavLink to="/portal"></NavLink>
-    </nav>
     <Routes>
       <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
       <Route path="/portal" element={<PortalContainer loggedInEmployee={loggedInEmployee}/>} />

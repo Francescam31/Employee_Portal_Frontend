@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { Link , useNavigate} from "react-router-dom";
 
 const LoginForm = ({setEmployeeLogin}) => {
+
+    const navigate = useNavigate();
     
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("")
@@ -33,8 +36,13 @@ const postLogin = async () => {
 // set response from fetch via the function passed through here {}
 const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const foundEmployee = await postLogin()
-    setEmployeeLogin(foundEmployee);
+    try{
+        const foundEmployee = await postLogin()
+        setEmployeeLogin(foundEmployee);
+        navigate("/portal");
+    } catch {
+        alert("User not found");
+    }
 }
 
     return (
