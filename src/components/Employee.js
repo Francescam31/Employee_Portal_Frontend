@@ -8,12 +8,20 @@ if(!loggedInEmployee){
 
 return(
     <div className="Employee">
+        <img></img>
         <h4>Employee id: {loggedInEmployee.id}</h4>
         <h3 className="Employee-name">Name: {loggedInEmployee.name}</h3>
         <h3 className="Employee-email">Email: {loggedInEmployee.email}</h3>
         <h3 className="Employee-department-name">Department: {loggedInEmployee.department.name}</h3>
         <p>Contact Number: {loggedInEmployee.contactNumber}</p>
         <p>Wage: £{loggedInEmployee.hourlyWage}ph</p>
+        <h2>Shifts</h2>
+        <ul>
+                {loggedInEmployee.shifts.map((shift, index) => (
+                    <li key={index}>{shift.date}</li>
+                ))}
+        </ul>
+        
     </div>
 )
 

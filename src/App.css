@@ -36,3 +36,83 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* login page */
+
+.login-logo {
+  width: 300px;
+  aspect-ratio: 1;
+}
+
+    .login-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0; /* Background color for the whole page */
+    }
+
+    .login-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .login-logo {
+        max-width: 100px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+    }
+
+    .login-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .welcome-text {
+        font-weight: bold;
+    }
+
+    .email-prompt,
+    .password-prompt {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #00cc00; /* Green border */
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .forgotten-password-button {
+        text-decoration: none;
+        color: #00cc00; /* Green text color */
+    }
+
+    .login-button {
+        background-color: #00cc00; /* Green background color */
+        color: #ffffff; /* White text color */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+
+
+
+/* portal */
+
+/* shifts */
+
+/* about? */
+
