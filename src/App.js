@@ -2,6 +2,7 @@ import "./App.css";
 import LoginForm from "./components/LoginForm";
 import { useState } from "react";
 import PortalContainer from "./containers/PortalContainer";
+import {BrowserRouter, Routes, Route, NavLink} from 'react-router-dom';
 
 
 function App() {
@@ -17,8 +18,16 @@ function App() {
 
   return (
     <div>
-      <LoginForm setEmployeeLogin={setEmployeeLogin}/>
-      {loggedInEmployee ? <PortalContainer loggedInEmployee={loggedInEmployee}/> : <p>Please Log in </p>}
+    <BrowserRouter>
+    <nav>
+    <NavLink to="/"></NavLink>
+    <NavLink to="/portal"></NavLink>
+    </nav>
+    <Routes>
+      <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
+      <Route path="/portal" element={<PortalContainer loggedInEmployee={loggedInEmployee}/>} />
+    </Routes>
+    </BrowserRouter>
     </div>
   );
 }

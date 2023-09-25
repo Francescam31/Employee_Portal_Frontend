@@ -17,7 +17,9 @@ const PortalContainer = ({loggedInEmployee}) => {
 //   }, []);
 
 //   console.log(employee);
-  
+  if(!loggedInEmployee) {
+    return <p>Return to login</p>
+  }
 
   return (
   <div className="portal-container">

@@ -4,9 +4,6 @@ const LoginForm = ({setEmployeeLogin}) => {
     
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("")
-    
-
-   
 
 // create function that handles change on the input field
 
