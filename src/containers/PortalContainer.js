@@ -6,7 +6,7 @@ const PortalContainer = ({loggedInEmployee}) => {
   // const [team, setTeam] = useState([]);
 
 //   const fetchEmployee = async () => {
-//     const response = await fetch("http://localhost:8080/employees/1");
+//     const response = await fetch("http://localhost:8080/employees");
 //     const data = await response.json();
 //     setEmployee(data);
 //   };

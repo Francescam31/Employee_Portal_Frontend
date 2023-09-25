@@ -1,10 +1,10 @@
-const EmployeeList = ({employee}) => {
+const EmployeeList = ({loggedInEmployee}) => {
 
-    if(employee){
+    if(loggedInEmployee){
         return(
             <>
-            <h3>My Department: {employee.department.name}</h3>
-            <ul className="employee-list">{employee.department.employees.map((employee, index) => (
+            <h3>My Department: {loggedInEmployee.department.name}</h3>
+            <ul className="employee-list">{loggedInEmployee.department.employees.map((employee, index) => (
                 <li key = {index}>{employee.name}</li>))}</ul>
             </>
         );
