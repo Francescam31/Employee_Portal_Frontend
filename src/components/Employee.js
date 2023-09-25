@@ -9,6 +9,7 @@ if(!loggedInEmployee){
 return(
     <div className="Employee">
         <img></img>
+        <img className="logo" src="/rainforest retail.png"></img>
         <h4>Employee id: {loggedInEmployee.id}</h4>
         <h3 className="Employee-name">Name: {loggedInEmployee.name}</h3>
         <h3 className="Employee-email">Email: {loggedInEmployee.email}</h3>

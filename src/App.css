@@ -64,7 +64,7 @@
     .login-logo {
         max-width: 100px;
         margin-bottom: 20px;
-        border-radius: 50%;
+        border-radius: 10%;
     }
 
     .login-title {
