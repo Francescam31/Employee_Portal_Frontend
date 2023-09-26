@@ -48,8 +48,8 @@ const handleFormSubmit = async (event) => {
     return (
         <div>
             <div className="login-container">
+            <img className="background-image" src="/Rainforest background.jpg"></img>
                 <div className="login-form">
-            {/* <img className="background-image" src="/Rainforest background.jpg"></img> */}
             <img className="login-logo" src="/rainforest retail.png"></img>
             <h1 className="login-title">Account Login</h1>
             <p className="welcome-text">Welcome Back</p>
@@ -67,7 +67,7 @@ const handleFormSubmit = async (event) => {
             
             <div className="footer">
             <p>Rainforest Retails is using cookies to collect anonymous visitor analytics. | PDF | Terms and Conditions, Privacy Policy | Mobile view
-©RainforestretailEmployee.com</p>
+            ©RainforestretailEmployee.com</p>
             </div>
             </div>
         </div>
