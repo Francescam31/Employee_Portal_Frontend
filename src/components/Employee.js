@@ -4,7 +4,8 @@ import moment from 'moment';
 
 const Employee = ({loggedInEmployee}) =>{
 
-console.log(loggedInEmployee);
+// console.log(loggedInEmployee);
+
 
 if(!loggedInEmployee){
     return <p>loading data</p>
@@ -27,7 +28,7 @@ return(
                     <li key={index}>{shift.date}</li>
                 ))}
         </ul>
-        <EmployeeCalendar />
+        <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
     </div>
 )
 
