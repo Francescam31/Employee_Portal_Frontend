@@ -1,3 +1,4 @@
+import EmployeeCalendar from "./EmployeeCalendar";
 const Employee = ({loggedInEmployee}) =>{
 
 console.log(loggedInEmployee);
@@ -22,7 +23,7 @@ return(
                     <li key={index}>{shift.date}</li>
                 ))}
         </ul>
-        
+        <EmployeeCalendar />
     </div>
 )
 
