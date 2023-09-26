@@ -1,4 +1,7 @@
 import EmployeeCalendar from "./EmployeeCalendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import moment from 'moment';
+
 const Employee = ({loggedInEmployee}) =>{
 
 console.log(loggedInEmployee);
@@ -6,6 +9,7 @@ console.log(loggedInEmployee);
 if(!loggedInEmployee){
     return <p>loading data</p>
 }
+
 
 return(
     <div className="Employee">

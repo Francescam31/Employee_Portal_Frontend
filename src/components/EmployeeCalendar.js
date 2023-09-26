@@ -1,14 +1,40 @@
-import {Calendar} from "react-big-calendar"
+import {Calendar, momentLocalizer} from "react-big-calendar"
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import moment from "moment";
 
-// const events = [
-//     {
-    // pass down the shift information from the employee to display the start and end time of the shift 
-//     }
-// ]
 
-const EmployeeCalendar = () =>{
-    return <Calendar />
+const EmployeeCalendar = ({employee, calendar}) =>{
+
+    const localizer = momentLocalizer(moment);
+
+    const events = [
+        {
+          start: moment().toDate(),
+          end: moment()
+            .add(1, "days")
+            .toDate(),
+          title: "Some title"
+        }
+      ];
+      
+    
+    // const calendar = () =>{
+    //     return <Calendar style={{ height: '500px' }} localizer={localizer}/>
+    // }
+
+    
+    return (
+    <>
+        <h2>Calendar</h2>
+        <Calendar
+          localizer={localizer}
+          defaultDate={new Date()}
+          defaultView="month"
+          events={events}
+          style={{ height: "50vh" }}
+        />
+    </>
+    )
 }
 
 export default EmployeeCalendar;
