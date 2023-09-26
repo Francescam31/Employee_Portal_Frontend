@@ -3,7 +3,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from "moment";
 
 
-const EmployeeCalendar = ({employee, calendar}) =>{
+const EmployeeCalendar = ({employee}) =>{
 
     const localizer = momentLocalizer(moment);
 
