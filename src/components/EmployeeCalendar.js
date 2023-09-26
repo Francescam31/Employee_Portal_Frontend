@@ -8,30 +8,34 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
     const localizer = momentLocalizer(moment);
 
     let events = [];
-
-    // loop through the employees department employee shift list 
-    // make an event by extracting the date and the type from the shift object
-    // if the type is morning make the time = .. 
+   
     for(let i= 0; i<loggedInEmployee.shifts.length; i++){
-        
-      // make an event take out the date and the type 
+      let startNumber;
+      let endNumber;
+
+        if(loggedInEmployee.shifts[i].type = "MORNING"){
+          startNumber = 9;
+          endNumber = 5;
+        }
+        if(loggedInEmployee.shifts[i].type = "AFTERNOON"){
+          startNumber = 12;
+          endNumber = 20
+        }
+        if(loggedInEmployee.shifts[i].type = "EVENING"){
+          startNumber = 16
+          endNumber = 0
+        }
+
         let newevent = {
-          title: loggedInEmployee.shifts[i].type,
-          start: new Date(loggedInEmployee.shifts[i].date),
-          end:  new Date(loggedInEmployee.shifts[i].date)
+          title: `${loggedInEmployee.department.name}: ${loggedInEmployee.shifts[i].type}`,
+          start: new Date(loggedInEmployee.shifts[i].date).setHours(startNumber),
+          end:  new Date(loggedInEmployee.shifts[i].date).setHours(endNumber)
         }
         events.push(newevent);
+
+    console.log(startNumber);   
         
-    }
-    // const events = [
-    //     {
-    //       start: new Date(2023, 8, 26, 14, 30, 0),
-    //       end: new Date(2023, 8, 26, 15, 30, 0),
-    //       title: "Some title"
-    //     }
-    //   ];
-      
-    
+    } 
 
     
     return (
