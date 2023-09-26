@@ -8,20 +8,21 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
     const localizer = momentLocalizer(moment);
 
     let events = [];
+    let startNumber;
+    let endNumber;
    
     for(let i= 0; i<loggedInEmployee.shifts.length; i++){
-      let startNumber;
-      let endNumber;
+      
 
-        if(loggedInEmployee.shifts[i].type = "MORNING"){
+        if(loggedInEmployee.shifts[i].type == "MORNING"){
           startNumber = 9;
           endNumber = 5;
         }
-        if(loggedInEmployee.shifts[i].type = "AFTERNOON"){
+        if(loggedInEmployee.shifts[i].type == "AFTERNOON"){
           startNumber = 12;
           endNumber = 20
         }
-        if(loggedInEmployee.shifts[i].type = "EVENING"){
+        if(loggedInEmployee.shifts[i].type == "EVENING"){
           startNumber = 16
           endNumber = 0
         }
