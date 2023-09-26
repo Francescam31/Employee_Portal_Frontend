@@ -1,28 +1,27 @@
 import { useState } from "react";
 
-const ShiftForm = ({postShifts}) => {
+const ShiftForm = ({postShift, loggedInEmployee}) => {
 
-    const [stateShifts, setStateShifts] = useState({
+    const [stateShift, setStateShift] = useState({
         date: "", 
-        type: "",
-        employee: ""
+        type: ""
       });
 
-
       const handleShiftChange = (event) => {
-        const shift = event.target;
-        const clonedShift = {...stateShifts};
-        clonedShift[shift] = event.target.value;
-        setStateShifts(clonedShift);
+        const shiftProperty = event.target.name;
+        const clonedShift = {...stateShift};
+        clonedShift[shiftProperty] = event.target.value;
+        setStateShift(clonedShift);
       }
       
       const handleShiftSubmit = (event) => {
         event.preventDefault();
-        postShifts(stateShifts);
-        setStateShifts({
+        postShift(stateShift);
+        setStateShift({
             date: "", 
             type: "",
-            employee: ""});
+            // employeeId: loggedInEmployee
+          });
         }
 // "" , loggedInEmployee?
 
@@ -37,7 +36,7 @@ const ShiftForm = ({postShifts}) => {
                 id="shift-date"
                 name="date"
                 type="date"
-                value={stateShifts.date}
+                value={stateShift.date}
                 onChange={handleShiftChange}
                 />
                 <label >
@@ -46,11 +45,11 @@ const ShiftForm = ({postShifts}) => {
                 <select 
                 id="shift-type"
                 name="type"
-                defaultValue="Select-type"
+                value={stateShift.type}
                 onChange={handleShiftChange}>
-                <option value ="morning">Morning</option>
-                <option value ="afternoon">Afternoon</option>
-                <option value ="evening">Evening</option>
+                <option value ="MORNING">Morning</option>
+                <option value ="AFTERNOON">Afternoon</option>
+                <option value ="EVENING">Evening</option>
                 </select>
                 <button type="submit">Add </button>
             </form>

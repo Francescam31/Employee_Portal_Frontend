@@ -3,7 +3,7 @@ import Employee from "../components/Employee";
 import EmployeeList from "../components/EmployeeList";
 import ShiftForm from "../components/ShiftForm";
 
-const PortalContainer = ({loggedInEmployee}) => {
+const PortalContainer = ({loggedInEmployee, updateShifts}) => {
   const [shifts, setShifts] = useState([]);
   
 
@@ -17,14 +17,15 @@ const PortalContainer = ({loggedInEmployee}) => {
   fetchShifts();
   }, []);
 
-const postShifts = async (addShifts) => {
+const postShift = async (newShift) => {
+  newShift.employeeId = loggedInEmployee.id;
   const response = await fetch("http://localhost:8080/shifts", {
     method: "POST",
     headers: { 'Content-Type': 'application/json'},
-    body: JSON.stringify(addShifts)
+    body: JSON.stringify(newShift)
   })
-  const savedShifts = await response.json();
-  setShifts([...shifts, savedShifts])
+  const savedShift = await response.json();
+  updateShifts(savedShift)
 }
 
  
@@ -38,7 +39,7 @@ const postShifts = async (addShifts) => {
     <h2 className="header">Employee Portal</h2>
     <Employee loggedInEmployee={loggedInEmployee}/> 
     <EmployeeList loggedInEmployee={loggedInEmployee}/> 
-    <ShiftForm shifts={shifts} postShifts={postShifts}/> 
+    <ShiftForm loggedInEmployee={loggedInEmployee} postShift={postShift} /> 
   </div>
   );
 };

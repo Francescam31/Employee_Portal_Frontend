@@ -16,12 +16,20 @@ function App() {
     setloggedInEmployee(login)
   }
 
+  const updateShifts = (newShift) => {
+    const updatedEmployee = {...loggedInEmployee};
+    updatedEmployee.shifts.push(newShift);
+    setloggedInEmployee(updatedEmployee)
+  }
+
+  // const loggedInEmployeeId = loggedInEmployee.id;
+
   return (
     <div>
     <BrowserRouter>
     <Routes>
       <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
-      <Route path="/portal" element={<PortalContainer loggedInEmployee={loggedInEmployee}/>} />
+      <Route path="/portal" element={<PortalContainer loggedInEmployee={loggedInEmployee} updateShifts={updateShifts}/>} />
     </Routes>
     </BrowserRouter>
     </div>
