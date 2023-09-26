@@ -1,22 +1,33 @@
 import { useEffect, useState } from "react";
 import Employee from "../components/Employee";
 import EmployeeList from "../components/EmployeeList";
+import ShiftForm from "../components/ShiftForm";
 
 const PortalContainer = ({loggedInEmployee}) => {
-  // const [team, setTeam] = useState([]);
+  const [shifts, setShifts] = useState([]);
+  
 
-//   const fetchEmployee = async () => {
-//     const response = await fetch("http://localhost:8080/employees");
-//     const data = await response.json();
-//     setEmployee(data);
-//   };
+  const fetchShifts = async () => {
+  const response = await fetch("http://localhost:8080/shifts");
+  const shiftsData = await response.json();
+  setShifts(shiftsData);
+  }
 
+  useEffect(() => {
+  fetchShifts();
+  }, []);
 
-//   useEffect(() => {
-//     fetchEmployee();
-//   }, []);
+const postShifts = async (addShifts) => {
+  const response = await fetch("http://localhost:8080/shifts", {
+    method: "POST",
+    headers: { 'Content-Type': 'application/json'},
+    body: JSON.stringify(addShifts)
+  })
+  const savedShifts = await response.json();
+  setShifts([...shifts, savedShifts])
+}
 
-//   console.log(employee);
+ 
   if(!loggedInEmployee) {
     return <p>Return to login</p>
   }
@@ -26,7 +37,8 @@ const PortalContainer = ({loggedInEmployee}) => {
     <h1 className="logo">Rainforest Retail</h1>
     <h2 className="header">Employee Portal</h2>
     <Employee loggedInEmployee={loggedInEmployee}/> 
-    <EmployeeList loggedInEmployee={loggedInEmployee}/>  
+    <EmployeeList loggedInEmployee={loggedInEmployee}/> 
+    <ShiftForm shifts={shifts} postShifts={postShifts}/> 
   </div>
   );
 };
