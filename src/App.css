@@ -40,10 +40,12 @@
 
 /* login page */
 
-.background-image {
+.login-container .background-image {
   margin: 0;
   padding: 0;
   background-size: cover;
+  position: fixed;
+  z-index: -1;
 
 }
 
@@ -53,21 +55,23 @@
   aspect-ratio: 1;
 }
 
-    /* .login-container { */
-        /* display: flex;
-        flex-direction: column; */
-        /* justify-content: center; */ 
-        /* align-items: center;
+    .login-container {
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
         height: 100vh;
-        background-color: #f0f0f0; /* Background color for the whole page */
-    /* } */
+       
+    }
 
     .login-form {
-        background-color: #ffffff;
+        background-color: #F3F0E1;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         text-align: center;
+        width: 50%;
+       
         
     }
 
@@ -98,6 +102,10 @@
         border: 1px solid #00cc00; /* Green border */
         border-radius: 5px;
         text-align: center;
+    }
+
+    .hr {
+      visibility: hidden;
     }
 
     .forgotten-password-button {
