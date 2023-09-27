@@ -36,6 +36,12 @@
     margin: 0;
 }
 
+.employee {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .component-tiles {
     display: flex;
     justify-content: center;

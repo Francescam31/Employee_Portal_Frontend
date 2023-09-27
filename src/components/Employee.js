@@ -3,6 +3,7 @@ import EmployeeCalendar from "./EmployeeCalendar";
 import moment from 'moment';
 import '../Employee.css';
 
+
 const Employee = ({loggedInEmployee}) =>{
 
 // console.log(loggedInEmployee);
@@ -14,20 +15,16 @@ if(!loggedInEmployee){
 
 
 return(
-    <div className="Employee">
-        {/* <img></img>
-        <img className="logo" src="/rainforest retail.png"></img> */}
-        <div className="about">
-        {/* <h4>Employee id: {loggedInEmployee.id}</h4> */}
-        <h3 className="Employee-name">Welcome {loggedInEmployee.name}</h3>
-        {/* <h3 className="Employee-email">{loggedInEmployee.email}</h3> */}
-        <h3 className="Employee-department-name">Department: {loggedInEmployee.department.name}</h3>
+    <div className="employee-box">
+        {/* <img className="user-icon" src="/user icon.png"> </img> */}
+
+        <h2 className="employee-name">Welcome {loggedInEmployee.name}</h2>
+
+        <h3 className="employee-department-name">Department: {loggedInEmployee.department.name}</h3>
         <p>Contact Number: {loggedInEmployee.contactNumber}</p>
         <p>Wage: £{loggedInEmployee.hourlyWage}ph</p>
-        </div>
-        {/* <div className="employee-calendar-format"> 
-        <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
-        </div> */}
+        
+        
     </div>
 )
 

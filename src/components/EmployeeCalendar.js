@@ -50,7 +50,7 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
         <Calendar className="calendar"
           localizer={localizer}
           defaultDate={new Date()}
-          defaultView="week"
+          defaultView="month"
           events={events}
           style={{ height: "50vh", width: "50vh"}}
           min ={new Date(2023,9,1,8,0,0)}

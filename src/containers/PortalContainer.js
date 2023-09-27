@@ -48,8 +48,9 @@ const postShift = async (newShift) => {
     <h1 className="logo-header">Rainforest Retail</h1>
     <img className="logo-image" src="/rainforest retail.png"></img>
     </div>
+    <div className="employee">
       <Employee loggedInEmployee={loggedInEmployee}/> 
-
+      </div>
       <div className="component-tiles">
     <div className="box">
             <div className="shift-title">
