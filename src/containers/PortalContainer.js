@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Employee from "../components/Employee";
 import EmployeeList from "../components/EmployeeList";
 import ShiftForm from "../components/ShiftForm";
+import '../PortalContainer.css';
 
 const PortalContainer = ({loggedInEmployee, updateShifts}) => {
   const [shifts, setShifts] = useState([]);
@@ -40,12 +41,17 @@ const postShift = async (newShift) => {
 
   return (
   <div className="portal-container">
-    <a href="/"><button>Log out</button></a>
-    <h1 className="logo">Rainforest Retail</h1>
-    <h2 className="header">Employee Portal</h2>
+    <a href="/" className="logout-button"><button>Log out</button></a>
+    <div className="logo">
+    <h1 className="logo-header">Rainforest Retail</h1>
+    <img></img>
+        <img className="logo-image" src="/rainforest retail.png"></img>
+    </div>
+    {/* <h2 className="header">Employee Portal</h2> */}
     <Employee loggedInEmployee={loggedInEmployee}/> 
     <ShiftForm loggedInEmployee={loggedInEmployee} postShift={postShift} /> 
     <EmployeeList loggedInEmployee={loggedInEmployee}/> 
+    
   </div>
   );
 };
