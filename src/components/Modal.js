@@ -1,6 +1,8 @@
 import React from "react";
+import "./Modal.css";
 
-function Modal({closeModal}) {
+function Modal({closeModal,loggedInEmployee,index}) {
+    console.log(loggedInEmployee.department.employees.name);
 
     return <div className="modal-background">
         <div className="modal-container">
@@ -9,15 +11,23 @@ function Modal({closeModal}) {
                 }}>X</button>
              </div>
                 <div className="m-title">
-                    <h1>Are you sure you want to continue</h1>
+                    <h2>{loggedInEmployee.department.employees[index].name}</h2>
+                    <h3>Employee details</h3>
                 </div>
                 <div className="m-body">
-                    <p>The next page is awesome! you should move forward</p>
+                    <p>Email: {loggedInEmployee.department.employees[index].email}</p>
+                    <p>Contract Number: {loggedInEmployee.department.employees[index].contactNumber}</p>
+                {/* if(loggedInEmployee.department.employees[index].manager){
+                        <p>Is your manager</p> }
+                    else{
+                     <p>Is not your manager</p>
+                     } */}
+                     <p>Is manager</p>
                 </div>
                 <div className="m-footer">
-                    <button onClick={()=>{closeModal(false);
-                }}>Cancel</button>
-                    <button>Continue</button>
+                    <button>Call {loggedInEmployee.department.employees[index].name}</button>
+                    <button id="cancel-btn" onClick={()=>{closeModal(false);
+                }}>Close</button>
                 </div>
         </div>
     </div>

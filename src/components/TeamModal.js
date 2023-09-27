@@ -7,14 +7,7 @@ const TeamModal = ({loggedInEmployee}) =>{
 
     const displayMessage =() =>{
         <div>
-        <p>{loggedInEmployee.department.employees.name}</p>
-        <p>{loggedInEmployee.department.employees.email}</p>
-        <p>{loggedInEmployee.department.employees.contactNumber}</p>
-        if(loggedInEmployee.department.employees.manager){
-             <p>Is your manager</p> }
-        else{
-            <p>Is not your manager</p>
-        }
+        {/* <message></message> */}
         </div>
     }
 

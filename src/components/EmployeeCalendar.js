@@ -34,7 +34,7 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
         }
         events.push(newevent);
 
-    console.log(startNumber);   
+    // console.log(startNumber);   
         
     } 
 
