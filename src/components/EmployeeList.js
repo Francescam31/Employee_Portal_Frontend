@@ -15,13 +15,16 @@ const EmployeeList = ({loggedInEmployee}) => {
         setOpenModals(newOpenModals);
       };
 
+    // if(loggedInEmployee.id === loggedInEmployee.department.employee[index].id) then display "name (You)"
+
+
 
     if(loggedInEmployee){
         return(
             <>
             <h3>My Department: {loggedInEmployee.department.name}</h3>
             <ul className="employee-list">{loggedInEmployee.department.employees.map((employee, index) => (
-             <li key = {index}>{employee.name}
+             <li key = {index}>{loggedInEmployee.id===employee.id ? employee.name +"(You)" :employee.name }
                 <button className="open-modal-btn"  
                 onClick={()=>{toggleModal(index)}
                 }
