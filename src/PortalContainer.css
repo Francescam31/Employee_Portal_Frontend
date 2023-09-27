@@ -36,35 +36,11 @@
     margin: 0;
 }
 
-/* .shift-box { */
-    /* padding: 10px;
-    border: 1px black solid; */
-    /* margin: 50px; */
-    /* border-radius: 5px; */
-    /* justify-content: center;
-    align-items: center;
-    display: flex; */
-    /* width: 300px; */
-    /* border: 1px solid black; */
-    /* padding: 20px; */
-    /* text-align: center; */
-/* } */
-
-/* .shift-title {
-    text-align: center;
-}
-
-.shifts-list {
-    text-align: left;
-} */
-
 .component-tiles {
     display: flex;
     justify-content: center;
     /* flex-direction: column;
     align-items: center; */
-    
-
 }
 
 .box {
