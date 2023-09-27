@@ -7,6 +7,7 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
 
     const localizer = momentLocalizer(moment);
 
+
     let events = [];
     let startNumber;
     let endNumber;
@@ -16,7 +17,7 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
 
         if(loggedInEmployee.shifts[i].type == "MORNING"){
           startNumber = 9;
-          endNumber = 5;
+          endNumber = 17;
         }
         if(loggedInEmployee.shifts[i].type == "AFTERNOON"){
           startNumber = 12;
@@ -24,17 +25,20 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
         }
         if(loggedInEmployee.shifts[i].type == "EVENING"){
           startNumber = 16
-          endNumber = 0
+          endNumber = 23
         }
+        
+        // ?
+        const startTime = new Date(loggedInEmployee.shifts[i].date).setHours(startNumber);
+        const endTime = new Date(loggedInEmployee.shifts[i].date).setHours(endNumber);
 
         let newevent = {
-          title: `${loggedInEmployee.department.name}: ${loggedInEmployee.shifts[i].type}`,
-          start: new Date(loggedInEmployee.shifts[i].date).setHours(startNumber),
-          end:  new Date(loggedInEmployee.shifts[i].date).setHours(endNumber)
+          title: `${loggedInEmployee.department.name}: ${loggedInEmployee.shifts[i].type.toLowerCase()}`,
+          start: new Date(startTime),
+          end:  new Date(endTime)
         }
         events.push(newevent);
-
-    console.log(startNumber);   
+  
         
     } 
 
@@ -46,9 +50,11 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
         <Calendar className="calendar"
           localizer={localizer}
           defaultDate={new Date()}
-          defaultView="month"
+          defaultView="week"
           events={events}
-          style={{ height: "50vh" }}
+          style={{ height: "50vh", width: "50vh"}}
+          min ={new Date(2023,9,1,8,0,0)}
+          max ={new Date(2023,9,1,23,0,0)}
          />
          </div>
     </>
