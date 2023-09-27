@@ -1,19 +1,20 @@
 .portal-container {
-    display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-
+    padding-top:200px;
 }
 
-/* logo */
-.logo {
-    align-items: center;
+
+.header {
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    padding: 30px 30px;
+    background: beige;
     display: flex;
-    flex-direction: column;
+    z-index: -1;
+    
 }
-
-.logo-header {
-    text-align: center;
-}
+ 
 
 .logo-image {
     max-width: 100px;
@@ -26,9 +27,31 @@
 
 /* logout button */
 .logout-button {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     padding: 0;
     margin: 0;
+}
+
+.shift-box {
+    /* padding: 10px;
+    border: 1px black solid; */
+    margin: 50px;
+    border-radius: 5px;
+    /* justify-content: center;
+    align-items: center;
+    display: flex; */
+    width: 300px;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+.shift-title {
+    text-align: center;
+}
+
+.shifts-list {
+    text-align: left;
 }

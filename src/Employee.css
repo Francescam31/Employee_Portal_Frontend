@@ -6,24 +6,12 @@
 
 }
 
-.shift-box {
-    /* padding: 10px;
-    border: 1px black solid; */
+.employee-calendar-format {
     margin: 50px;
     border-radius: 5px;
-    /* justify-content: center;
-    align-items: center;
-    display: flex; */
-    width: 300px;
+    width: 450px;
     border: 1px solid black;
     padding: 20px;
     text-align: center;
 }
 
-.shift-title {
-    text-align: center;
-}
-
-.shifts-list {
-    text-align: left;
-}

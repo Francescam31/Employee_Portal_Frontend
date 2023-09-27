@@ -41,14 +41,23 @@ const postShift = async (newShift) => {
 
   return (
   <div className="portal-container">
+    <div className="header">
     <a href="/" className="logout-button"><button>Log out</button></a>
-    <div className="logo">
     <h1 className="logo-header">Rainforest Retail</h1>
-    <img></img>
-        <img className="logo-image" src="/rainforest retail.png"></img>
+    <img className="logo-image" src="/rainforest retail.png"></img>
     </div>
-    {/* <h2 className="header">Employee Portal</h2> */}
-    <Employee loggedInEmployee={loggedInEmployee}/> 
+      <Employee loggedInEmployee={loggedInEmployee}/> 
+    <div className="shift-box">
+            <div className="shift-title">
+                <h2>Shifts</h2>
+            </div>
+        <ul className="shifts-list">
+                {loggedInEmployee.shifts.map((shift, index) => (
+                    <li key={index}>{shift.date}:{shift.type}</li>
+        
+                ))}
+        </ul>
+        </div>
     <ShiftForm loggedInEmployee={loggedInEmployee} postShift={postShift} /> 
     <EmployeeList loggedInEmployee={loggedInEmployee}/> 
     
