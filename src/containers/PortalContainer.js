@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Employee from "../components/Employee";
 import EmployeeList from "../components/EmployeeList";
 import ShiftForm from "../components/ShiftForm";
+import EmployeeCalendar from "../components/EmployeeCalendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 import '../PortalContainer.css';
 
 const PortalContainer = ({loggedInEmployee, updateShifts}) => {
@@ -47,20 +49,33 @@ const postShift = async (newShift) => {
     <img className="logo-image" src="/rainforest retail.png"></img>
     </div>
       <Employee loggedInEmployee={loggedInEmployee}/> 
-    <div className="shift-box">
+
+      <div className="component-tiles">
+    <div className="box">
             <div className="shift-title">
                 <h2>Shifts</h2>
             </div>
         <ul className="shifts-list">
                 {loggedInEmployee.shifts.map((shift, index) => (
                     <li key={index}>{shift.date}:{shift.type}</li>
-        
                 ))}
         </ul>
         </div>
-    <ShiftForm loggedInEmployee={loggedInEmployee} postShift={postShift} /> 
-    <EmployeeList loggedInEmployee={loggedInEmployee}/> 
-    
+      
+      <div className="box"> 
+        <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
+      </div>
+
+      <div className="box">
+      <ShiftForm postShift={postShift} /> 
+      </div>
+
+  </div>
+
+  <div className="team-box">
+      <EmployeeList loggedInEmployee={loggedInEmployee}/> 
+      </div>
+
   </div>
   );
 };

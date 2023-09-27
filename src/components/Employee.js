@@ -1,5 +1,5 @@
 import EmployeeCalendar from "./EmployeeCalendar";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+// import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from 'moment';
 import '../Employee.css';
 
@@ -25,9 +25,9 @@ return(
         <p>Contact Number: {loggedInEmployee.contactNumber}</p>
         <p>Wage: £{loggedInEmployee.hourlyWage}ph</p>
         </div>
-        <div className="employee-calendar-format"> 
+        {/* <div className="employee-calendar-format"> 
         <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
-        </div>
+        </div> */}
     </div>
 )
 
