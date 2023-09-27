@@ -9,10 +9,11 @@ const Sidebar = ({setOpenSidebar}) => {
 
 return (
     <div className="sidebar">
-        <p><BsIcons.BsFillPersonVcardFill /> Dashboard</p>
-        <p><BsIcons.BsCalendar3 /> Calendar</p>
-        <p><FaIcons.FaMoneyCheckAlt /> Payroll</p>
-        <a href="/"> <GrIcons.GrLogout /> Logout</a>
+        <p className="sidebar-p"><BsIcons.BsFillPersonVcardFill /> Dashboard</p>
+        <p className="sidebar-p"><BsIcons.BsCalendar3 /> Calendar</p>
+        <p className="sidebar-p"><BsIcons.BsFillPeopleFill /> My Team</p>
+        <p className="sidebar-p"><FaIcons.FaMoneyCheckAlt /> Payroll</p>
+        <a href="/" className="sidebar-l"> <GrIcons.GrLogout /> Logout</a>
     </div>
 )
 

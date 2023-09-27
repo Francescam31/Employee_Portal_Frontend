@@ -39,7 +39,7 @@ const toggleSidebar = () => {
   return (
     <div className="portal-page">
       <div className="sidebar-container">
-        <FaBars onClick={toggleSidebar}></FaBars>
+        <FaBars onClick={toggleSidebar} className="sidebar-button" ></FaBars>
         {openSidebar &&  <Sidebar setOpenSidebar={setOpenSidebar}/>}
       </div>
       <div className="portal-container">
