@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Employee from "../components/Employee";
 import EmployeeList from "../components/EmployeeList";
+import Sidebar from "../components/Sidebar";
+import { FaBars } from "react-icons/fa";
 
 const PortalContainer = ({loggedInEmployee}) => {
   // const [team, setTeam] = useState([]);
@@ -17,6 +19,14 @@ const PortalContainer = ({loggedInEmployee}) => {
 //   }, []);
 
 //   console.log(employee);
+
+const [openSidebar, setOpenSidebar] = useState(false);
+
+const toggleSidebar = () => {
+  if(openSidebar){setOpenSidebar(false);}
+  else{setOpenSidebar(true);} 
+}
+
   if(!loggedInEmployee) {
     return (
       <>
@@ -27,13 +37,17 @@ const PortalContainer = ({loggedInEmployee}) => {
   }
 
   return (
-  <div className="portal-container">
-    <a href="/"><button>Log out</button></a>
-    <h1 className="logo">Rainforest Retail</h1>
-    <h2 className="header">Employee Portal</h2>
-    <Employee loggedInEmployee={loggedInEmployee}/> 
-    <EmployeeList loggedInEmployee={loggedInEmployee}/>  
-  </div>
+    <div>
+      <button onClick={toggleSidebar()}><FaBars /></button>
+       {openSidebar &&  <Sidebar setOpenSidebar={setOpenSidebar}/>}
+        <div className="portal-container">
+          <a href="/"><button>Log out</button></a>
+          <h1 className="logo">Rainforest Retail</h1>
+          <h2 className="header">Employee Portal</h2>
+          <Employee loggedInEmployee={loggedInEmployee}/> 
+          <EmployeeList loggedInEmployee={loggedInEmployee}/>  
+        </div>
+    </div>
   );
 };
 

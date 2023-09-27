@@ -1,0 +1,9 @@
+
+
+.sidebar {
+    height: 500px;
+    width: 300px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
