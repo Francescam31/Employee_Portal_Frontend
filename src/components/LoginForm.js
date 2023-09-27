@@ -54,9 +54,9 @@ const handleFormSubmit = async (event) => {
             <h1 className="login-title">Account Login</h1>
             <p className="welcome-text">Welcome Back</p>
             <form onSubmit={handleFormSubmit}>
-                <p className="email-prompt">Enter your email</p>
+                {/* <p className="email-prompt">Enter your email</p> */}
                 <input className="input" name="email" placeholder="Email" onChange={handleChangeEmail} value={loginEmail}/>
-                <p className="password-prompt">Enter your password</p>
+                {/* <p className="password-prompt">Enter your password</p> */}
                 <input className="input" type="password" name="password" placeholder="Password" onChange={handleChangePassword} value={loginPassword}/>
                 <hr className="hr"></hr>
                 <Link className="forgotten-password-button">Forgotten password</Link>
