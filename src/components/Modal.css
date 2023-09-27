@@ -2,13 +2,15 @@
     width: 50vw;
     height: 50vh;
     /* background-color: rgba(200, 200, 200); */
-    /* position: fixed; */
+    /* absolute only one can pop up */
+    /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
 .modal-container {
+    /* position: absolute; */
     width: 500px;
     height: 500px;
     border-radius: 12px;
@@ -62,8 +64,9 @@
     background-color: cornflowerblue;
     color: white;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 17px;
     cursor: pointer;
+    box-shadow: -5px 4px 4px rgb(133, 126, 126);
   }
   
 #cancel-btn {

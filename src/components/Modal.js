@@ -7,9 +7,6 @@ function Modal({closeModal,loggedInEmployee,index}) {
     console.log(loggedInEmployee.department.employees.name);
 
 
-    // if(loggedInEmployee.manager){
-    //     let statement = ""
-    // }
 
 
     return <div className="modal-background">
