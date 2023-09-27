@@ -25,13 +25,17 @@ return(
         <p>Contact Number: {loggedInEmployee.contactNumber}</p>
         <p>Wage: £{loggedInEmployee.hourlyWage}ph</p>
         </div>
-        <h2>Shifts</h2>
-        <ul>
+        <div className="shift-box">
+            <div className="shift-title">
+                <h2>Shifts</h2>
+            </div>
+        <ul className="shifts-list">
                 {loggedInEmployee.shifts.map((shift, index) => (
                     <li key={index}>{shift.date}:{shift.type}</li>
         
                 ))}
         </ul>
+        </div>
         <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
     </div>
 )
