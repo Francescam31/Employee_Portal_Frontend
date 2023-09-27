@@ -1,10 +1,13 @@
 import React from "react";
 
-function Modal() {
+function Modal({closeModal}) {
 
     return <div className="modal-background">
         <div className="modal-container">
-                <button>X</button>
+            <div className="title-close-btn">
+                <button onClick={()=>{closeModal(false);
+                }}>X</button>
+             </div>
                 <div className="m-title">
                     <h1>Are you sure you want to continue</h1>
                 </div>
@@ -12,7 +15,8 @@ function Modal() {
                     <p>The next page is awesome! you should move forward</p>
                 </div>
                 <div className="m-footer">
-                    <button>Cancel</button>
+                    <button onClick={()=>{closeModal(false);
+                }}>Cancel</button>
                     <button>Continue</button>
                 </div>
         </div>
