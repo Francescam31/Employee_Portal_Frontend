@@ -1,17 +1,18 @@
 import "../Sidebar.css";
-import { FaBars } from "react-icons/fa";
+import * as BsIcons from "react-icons/bs";
+import * as FaIcons from "react-icons/fa";
+import * as GrIcons from "react-icons/gr";
+
 
 const Sidebar = ({setOpenSidebar}) => {
 
 
 return (
     <div className="sidebar">
-        
-        <button onClick={() => {setOpenSidebar(false)}}>X</button>
-        <p>Dashboard</p>
-        <p>Calendar</p>
-        <p>Payroll</p>
-        <a href="/">Logout</a>
+        <p><BsIcons.BsFillPersonVcardFill /> Dashboard</p>
+        <p><BsIcons.BsCalendar3 /> Calendar</p>
+        <p><FaIcons.FaMoneyCheckAlt /> Payroll</p>
+        <a href="/"> <GrIcons.GrLogout /> Logout</a>
     </div>
 )
 

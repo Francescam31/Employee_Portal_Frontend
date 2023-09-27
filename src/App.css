@@ -133,6 +133,10 @@
 
 
 /* portal */
+.portal-page {
+  display: flex;
+  flex-direction: row;
+}
 
 /* shifts */
 

@@ -1,9 +1,11 @@
 
 
 .sidebar {
-    height: 500px;
+    height: 100%;
     width: 300px;
-    background-color: aqua;
+    background-color: rgb(41, 111, 71);
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
+    font-size: x-large;
 }

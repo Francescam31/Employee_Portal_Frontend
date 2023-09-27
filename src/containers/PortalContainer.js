@@ -37,16 +37,18 @@ const toggleSidebar = () => {
   }
 
   return (
-    <div>
-      <button onClick={toggleSidebar()}><FaBars /></button>
-       {openSidebar &&  <Sidebar setOpenSidebar={setOpenSidebar}/>}
-        <div className="portal-container">
+    <div className="portal-page">
+      <div className="sidebar-container">
+        <FaBars onClick={toggleSidebar}></FaBars>
+        {openSidebar &&  <Sidebar setOpenSidebar={setOpenSidebar}/>}
+      </div>
+      <div className="portal-container">
           <a href="/"><button>Log out</button></a>
           <h1 className="logo">Rainforest Retail</h1>
           <h2 className="header">Employee Portal</h2>
           <Employee loggedInEmployee={loggedInEmployee}/> 
           <EmployeeList loggedInEmployee={loggedInEmployee}/>  
-        </div>
+      </div>
     </div>
   );
 };
