@@ -4,7 +4,7 @@ const ShiftForm = ({postShift, loggedInEmployee}) => {
 
     const [stateShift, setStateShift] = useState({
         date: "", 
-        type: ""
+        type: "MORNING"
       });
 
       const handleShiftChange = (event) => {
@@ -19,7 +19,7 @@ const ShiftForm = ({postShift, loggedInEmployee}) => {
         postShift(stateShift);
         setStateShift({
             date: "", 
-            type: "",
+            type: "MORNING",
             // employeeId: loggedInEmployee
           });
         }

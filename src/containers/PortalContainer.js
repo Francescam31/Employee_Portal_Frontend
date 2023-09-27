@@ -44,8 +44,8 @@ const postShift = async (newShift) => {
     <h1 className="logo">Rainforest Retail</h1>
     <h2 className="header">Employee Portal</h2>
     <Employee loggedInEmployee={loggedInEmployee}/> 
-    <EmployeeList loggedInEmployee={loggedInEmployee}/> 
     <ShiftForm loggedInEmployee={loggedInEmployee} postShift={postShift} /> 
+    <EmployeeList loggedInEmployee={loggedInEmployee}/> 
   </div>
   );
 };

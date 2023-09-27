@@ -25,7 +25,8 @@ return(
         <h2>Shifts</h2>
         <ul>
                 {loggedInEmployee.shifts.map((shift, index) => (
-                    <li key={index}>{shift.date}</li>
+                    <li key={index}>{shift.date}:{shift.type}</li>
+        
                 ))}
         </ul>
         <EmployeeCalendar loggedInEmployee={loggedInEmployee} />

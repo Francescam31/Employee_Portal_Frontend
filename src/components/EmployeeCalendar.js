@@ -33,7 +33,7 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
         const endTime = new Date(loggedInEmployee.shifts[i].date).setHours(endNumber);
 
         let newevent = {
-          title: `${loggedInEmployee.department.name}: ${loggedInEmployee.shifts[i].type.toLowerCase()}`,
+          title: `${loggedInEmployee.department.name}: ${loggedInEmployee.shifts[i].type}`,
           start: new Date(startTime),
           end:  new Date(endTime)
         }
