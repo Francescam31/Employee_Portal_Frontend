@@ -16,7 +16,9 @@ if(!loggedInEmployee){
 
 return(
     <div className="employee-box">
-        {/* <img className="user-icon" src="/user icon.png"> </img> */}
+        <img className="user-icon" src="/user icon.png"></img>
+        
+        <div className="employee-info">
 
         <h2 className="employee-name">Welcome {loggedInEmployee.name}</h2>
 
@@ -25,6 +27,7 @@ return(
         <p>Wage: £{loggedInEmployee.hourlyWage}ph</p>
         
         
+    </div>
     </div>
 )
 

@@ -1,6 +1,8 @@
 .App {
   text-align: center;
+  
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -46,6 +48,7 @@
   background-size: cover;
   position: fixed;
   z-index: -1;
+  font-family: 'Roboto', sans-serif;
 
 }
 
@@ -65,13 +68,16 @@
     }
 
     .login-form {
-        background-color: #F3F0E1;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        backdrop-filter: blur(20px); 
         padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(58, 75, 55, 0.2);
         text-align: center;
         width: 50%;
         max-width: 500px;
+      
         
     }
 
@@ -90,10 +96,7 @@
         font-weight: bold;
     }
 
-    .email-prompt,
-    .password-prompt {
-        font-weight: bold;
-    }
+
 
     .input {
         width: 50%;
@@ -109,8 +112,13 @@
     }
 
     .forgotten-password-button {
-        text-decoration: none;
-        color: #00cc00; /* Green text color */
+        
+        color: #bed0be; /* Green text color */
+        display: block;
+        margin-left: 118px;
+        font-size: 15px;
+
+        
     }
 
     .login-button {

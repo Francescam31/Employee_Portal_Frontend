@@ -5,6 +5,8 @@ import ShiftForm from "../components/ShiftForm";
 import EmployeeCalendar from "../components/EmployeeCalendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import '../PortalContainer.css';
+import { IonIcon } from '@ionic/react';
+import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
 
 const PortalContainer = ({loggedInEmployee, updateShifts}) => {
   const [shifts, setShifts] = useState([]);
@@ -44,9 +46,16 @@ const postShift = async (newShift) => {
   return (
   <div className="portal-container">
     <div className="header">
-    <a href="/" className="logout-button"><button>Log out</button></a>
+    <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
     <h1 className="logo-header">Rainforest Retail</h1>
     <img className="logo-image" src="/rainforest retail.png"></img>
+    <div className="header-icons">
+      <IonIcon icon={mailOutline}/>
+      <IonIcon icon={homeOutline}/>
+      <IonIcon icon={settingsOutline}/>
+      </div>
+    
+    
     </div>
     <div className="employee">
       <Employee loggedInEmployee={loggedInEmployee}/> 
@@ -76,8 +85,9 @@ const postShift = async (newShift) => {
   <div className="team-box">
       <EmployeeList loggedInEmployee={loggedInEmployee}/> 
       </div>
-
-  </div>
+    
+</div>
+  
   );
 };
 
