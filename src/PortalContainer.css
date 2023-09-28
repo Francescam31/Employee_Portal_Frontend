@@ -199,7 +199,7 @@
 
 /* team box light mode */
 .team-box-light{
-    width: 1500px;
+    width: 1000px;
     height: 500px;
     background-color: rgb(185, 218, 185);
     margin: 10px;
@@ -215,7 +215,7 @@
 
 /* team box dark mode */
 .team-box-dark {
-    width: 1500px;
+    width: 1000px;
     height: 500px;
     background-color: rgb(37, 38, 38);
     margin: 10px;

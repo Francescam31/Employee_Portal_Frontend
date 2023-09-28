@@ -10,10 +10,11 @@ import '../PortalContainer.css';
 import { IonIcon } from '@ionic/react';
 import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
 import "../ThemeButton.css";
+import MonthlyWage from "../components/MonthlyWage";
 
 const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme}) => {
   const [shifts, setShifts] = useState([]);
-  
+  const [shiftHistory, setShiftHistory] = useState([]);
 
   const fetchShifts = async () => {
   const response = await fetch("http://localhost:8080/shifts");
@@ -45,6 +46,21 @@ const toggleSidebar = () => {
   if(openSidebar){setOpenSidebar(false);}
   else{setOpenSidebar(true);} 
 }
+
+  
+  useEffect(() => {
+    if(loggedInEmployee) {
+      let shiftHistoryList = [];
+      for (let i = 0; i<loggedInEmployee.shifts.length; i++){
+        if(new Date(loggedInEmployee.shifts[i].date) <= new Date()){
+          shiftHistoryList.push(loggedInEmployee.shifts[i]);
+        }
+      } shiftHistoryList.sort((a,b) => new Date(a.date) - new Date(b.date));
+      setShiftHistory(shiftHistoryList);
+  }
+  }, [loggedInEmployee]);
+
+
 
   if(!loggedInEmployee) {
     return (
@@ -107,10 +123,10 @@ const toggleSidebar = () => {
             <div className="shift-title">
                 <h2>Shift History</h2>
             </div>
-        <ul className="shifts-list">
-                {loggedInEmployee.shifts.map((shift, index) => (
-                    <li key={index}>{shift.date}:{shift.type}</li>
-                ))}
+            <ul className="shifts-list">
+                {shiftHistory.map((shift, index) => ( // shift history
+                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
+                ))} 
         </ul>
       </div>
 </div>
@@ -118,6 +134,10 @@ const toggleSidebar = () => {
 
   <div className={`team-box-${theme}`}>
       <EmployeeList theme={theme} loggedInEmployee={loggedInEmployee}/> 
+      </div>
+
+      <div className="current-month-wage">
+        <MonthlyWage loggedInEmployee={loggedInEmployee} shift/>
       </div>
     
        </div> {/*page-elements */}
