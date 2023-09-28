@@ -60,23 +60,29 @@ const toggleSidebar = () => {
     <img className="portal-background" src="/Rainforest.jpeg"></img>
     <div className="header">
 
-    <div className="sidebar-container">
-        <FaBars onClick={toggleSidebar} className="sidebar-button" ></FaBars>
-        {openSidebar &&  <Sidebar setOpenSidebar={setOpenSidebar}/>}
-    </div>
-
+    <FaBars onClick={toggleSidebar} className="sidebar-button" ></FaBars>
     <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
     <h1 className="logo-header">Rainforest Retail</h1>
     <img className="logo-image" src="/rainforest retail.png"></img>
+
+
     <div className="header-icons">
       <IonIcon icon={mailOutline}/>
       <IonIcon icon={homeOutline}/>
       <IonIcon icon={settingsOutline}/>
       </div>
-    
-
-    
+  
     </div>
+
+<div className="portal-page">
+
+    <div className="sidebar-container">
+        
+        {openSidebar &&  <Sidebar setOpenSidebar={setOpenSidebar}/>}
+    </div>
+
+<div className="page-elements">
+
     <div className="employee">
       <Employee loggedInEmployee={loggedInEmployee}/> 
       </div>
@@ -106,6 +112,10 @@ const toggleSidebar = () => {
       <EmployeeList loggedInEmployee={loggedInEmployee}/> 
       </div>
     
+      </div>
+
+      </div>
+
 </div>
   
   );

@@ -24,6 +24,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin: 0px;
 }
 
 .App-link {
@@ -149,6 +150,7 @@
 .portal-page {
   display: flex;
   flex-direction: row;
+  margin: 0px;
 }
 
 .sidebar-button {
