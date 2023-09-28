@@ -83,6 +83,7 @@ const toggleSidebar = () => {
     <div className="logo">
     <h1 className="logo-header" >Rainforest Retail</h1>
     <img className="logo-image" src="/rainforest retail.png"></img>
+    <h1 className="logo-header" >Employee Portal</h1>
     </div>
 
     <div className="header-icons">
@@ -132,13 +133,16 @@ const toggleSidebar = () => {
 </div>
    </div> {/*component-tiles */}
 
+<div className="more-boxes">
   <div className={`team-box-${theme}`}>
       <EmployeeList theme={theme} loggedInEmployee={loggedInEmployee}/> 
       </div>
 
-      <div className="current-month-wage">
+      <div className={`current-month-wage-${theme}`}>
         <MonthlyWage loggedInEmployee={loggedInEmployee} shift/>
       </div>
+      
+</div>
     
        </div> {/*page-elements */}
 

@@ -3,8 +3,7 @@
 .portal-container {
     padding-top: 120px;
     /* display: flex; */
-    
-    
+    font-size: larger;
 }
 
 .portal-background {
@@ -59,13 +58,13 @@
 }
 
 
-
 .logo-image {
     max-width: 100px;
     /* margin-bottom: 20px; */
     margin-left: 20px;
     /* border-radius:20%; */
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .header-icons ion-icon {
@@ -101,7 +100,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 40px;
 }
 
@@ -197,6 +196,12 @@
     flex-grow: 2;
 }
 
+.more-boxes {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    /* padding-left: 50px; */
+}
+
 /* team box light mode */
 .team-box-light{
     width: 1000px;
@@ -215,7 +220,7 @@
 
 /* team box dark mode */
 .team-box-dark {
-    width: 10n00px;
+    width: 1000px;
     height: 500px;
     background-color: rgb(37, 38, 38);
     margin: 10px;
@@ -229,3 +234,31 @@
     margin-left: 63px;
 }
 
+.current-month-wage-light {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(185, 218, 217);;
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 2px solid rgba(58, 158, 128, 0.5); */
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #000;
+    padding-left: 50px;
+}
+
+.current-month-wage-dark {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(37, 38, 38);;
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 2px solid rgba(58, 158, 128, 0.5); */
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #000;
+}
