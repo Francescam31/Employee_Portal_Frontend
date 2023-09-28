@@ -10,7 +10,7 @@ import '../PortalContainer.css';
 import { IonIcon } from '@ionic/react';
 import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
 
-const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, setTheme}) => {
+const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme}) => {
   const [shifts, setShifts] = useState([]);
   
 
@@ -58,7 +58,7 @@ const toggleSidebar = () => {
 
   <div className="portal-container">
     <img className="portal-background" src="/Rainforest.jpeg"></img>
-    <div className="header">
+    <div className={`header-${theme}`}>
 
     <FaBars onClick={toggleSidebar} className="sidebar-button" ></FaBars>
 
@@ -73,15 +73,15 @@ const toggleSidebar = () => {
       <IonIcon icon={homeOutline}/>
       <IonIcon icon={settingsOutline}/>    
       <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
+     
       </div>
-  
+      <button className="mode-btn"onClick={toggleTheme}>{theme} mode</button>
     </div>
     
 <div className="portal-page">
-<button onClick={toggleTheme}> mode</button>
-    <div className="sidebar-container">
+    <div className={`"sidebar-container-${theme}`}>
         
-        {openSidebar &&  <Sidebar setOpenSidebar={setOpenSidebar}/>}
+        {openSidebar &&  <Sidebar theme={theme} setOpenSidebar={setOpenSidebar}/>}
     </div>
 
 <div className="page-elements">
@@ -92,16 +92,16 @@ const toggleSidebar = () => {
 
       <div className="component-tiles">
       
-      <div className="calendar-box"> 
+      <div className={`calendar-box-${theme}`}> 
         <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
       </div>
 
 <div className="shift-boxes"> 
-      <div className="box" id="box1">
+      <div className={`box-${theme}`} id="box1">
       <ShiftForm postShift={postShift} /> 
       </div>
 
-    <div className="box" id="box2">
+    <div className={`box-${theme}`} id="box2">
             <div className="shift-title">
                 <h2>Shift History</h2>
             </div>
@@ -114,7 +114,7 @@ const toggleSidebar = () => {
 </div>
    </div> {/*component-tiles */}
 
-  <div className="team-box">
+  <div className={`team-box-${theme}`}>
       <EmployeeList loggedInEmployee={loggedInEmployee}/> 
       </div>
     

@@ -42,7 +42,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
-      <Route path="/portal" element={<PortalContainer setTheme={setTheme} toggleTheme={toggleTheme} loggedInEmployee={loggedInEmployee} updateShifts={updateShifts}/>} />
+      <Route path="/portal" element={<PortalContainer theme={theme} toggleTheme={toggleTheme} loggedInEmployee={loggedInEmployee} updateShifts={updateShifts}/>} />
     </Routes>
     </BrowserRouter>
     </div>
