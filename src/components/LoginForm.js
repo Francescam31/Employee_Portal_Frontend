@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link , useNavigate} from "react-router-dom";
 
+
 const LoginForm = ({setEmployeeLogin}) => {
 
     const navigate = useNavigate();
@@ -48,19 +49,19 @@ const handleFormSubmit = async (event) => {
     return (
         <div>
             <div className="login-container">
-            <img className="background-image" src="/Rainforest background.jpg"></img>
+    
+            <img className="background-image" src="/Rainforest.jpeg"></img>
                 <div className="login-form">
             <img className="login-logo" src="/rainforest retail.png"></img>
-            <h1 className="login-title">Account Login</h1>
+            <h1 className="login-title">Portal Login</h1>
             <p className="welcome-text">Welcome Back</p>
             <form onSubmit={handleFormSubmit}>
-                <p className="email-prompt">Enter your email</p>
+                {/* <p className="email-prompt">Enter your email</p> */}
                 <input className="input" name="email" placeholder="Email" onChange={handleChangeEmail} value={loginEmail}/>
-                <p className="password-prompt">Enter your password</p>
+                {/* <p className="password-prompt">Enter your password</p> */}
                 <input className="input" type="password" name="password" placeholder="Password" onChange={handleChangePassword} value={loginPassword}/>
-                <hr className="hr"></hr>
-                <Link className="forgotten-password-button">Forgotten password</Link>
-                <hr className="hr"></hr>
+                <a href="#" className="forgotten-password-button">Forgotten Password?</a>
+               <hr className="hr"></hr>
                 <button className="login-button" type="submit">Log In</button>
             </form>
             </div>

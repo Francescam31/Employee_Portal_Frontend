@@ -1,0 +1,105 @@
+.portal-container {
+    padding-top:200px;
+    /* display: flex; */
+    
+    
+}
+
+.portal-background {
+    background-size: 50%;
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+    top: 0;
+    left: 0;
+
+}
+
+
+.header {
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    padding: 5px 30px;
+    background: rgb(185, 218, 185);
+    display: flex;
+    /* z-index: 20; */
+    
+}
+ 
+
+.logo-image {
+    max-width: 100px;
+    /* margin-bottom: 20px; */
+    margin-left: 20px;
+    border-radius:40%;
+
+    
+
+}
+
+.header-icons ion-icon {
+    margin-right: 10px; 
+  }
+
+.header-icons {
+    position: fixed;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    margin-left: 85%;
+
+}
+
+
+/* logout button */
+.logout-button {
+    position: fixed;
+    top: 5px;
+    right: 1%;
+    /* padding: 0; */
+    /* margin: 0; */
+    font-size: 2rem;
+    color: white;
+}
+
+.employee {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.component-tiles {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column;
+    align-items: center; */
+}
+
+.box {
+    
+    width: 500px;
+    height: 500px;
+    background-color: rgb(185, 218, 185);
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 2px solid rgba(58, 158, 128, 0.5); */
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+   
+    
+
+}
+
+.team-box {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(185, 218, 185);
+    margin: 10px;
+    border-radius: 5px;
+    flex: 1;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+}
