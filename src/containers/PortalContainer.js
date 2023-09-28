@@ -13,6 +13,7 @@ import MonthlyWage from "../components/MonthlyWage";
 
 const PortalContainer = ({loggedInEmployee, updateShifts}) => {
   const [shifts, setShifts] = useState([]);
+  const [shiftHistory, setShiftHistory] = useState([]);
   
 
   const fetchShifts = async () => {
@@ -45,7 +46,17 @@ const toggleSidebar = () => {
   else{setOpenSidebar(true);} 
 }
 
-
+  useEffect(() => {
+    if(loggedInEmployee) {
+      let shiftHistoryList = [];
+      for (let i = 0; i<loggedInEmployee.shifts.length; i++){
+        if(new Date(loggedInEmployee.shifts[i].date) <= new Date()){
+          shiftHistoryList.push(loggedInEmployee.shifts[i]);
+        }
+      } shiftHistoryList.sort((a,b) => new Date(a.date) - new Date(b.date));
+      setShiftHistory(shiftHistoryList);
+  }
+  }, [loggedInEmployee]);  
 
 
 
@@ -96,11 +107,11 @@ const toggleSidebar = () => {
       <div className="component-tiles">
     <div className="box">
             <div className="shift-title">
-                <h2>Shifts</h2>
+                <h2>Shift History</h2>
             </div>
         <ul className="shifts-list">
-                {loggedInEmployee.shifts.map((shift, index) => (
-                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} : {shift.type}</li>
+                {shiftHistory.map((shift, index) => ( // shift history
+                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
                 ))} 
         </ul>
         {/* {new Date(shift.date).toDateString()} */}
