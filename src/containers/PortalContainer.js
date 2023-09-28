@@ -100,9 +100,10 @@ const toggleSidebar = () => {
             </div>
         <ul className="shifts-list">
                 {loggedInEmployee.shifts.map((shift, index) => (
-                    <li key={index}>{shift.date}:{shift.type}</li>
-                ))}
+                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} : {shift.type}</li>
+                ))} 
         </ul>
+        {/* {new Date(shift.date).toDateString()} */}
         </div>
       
       <div className="box"> 
