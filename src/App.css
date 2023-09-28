@@ -43,12 +43,12 @@
 /* login page */
 
 .login-container .background-image {
-  margin: 0;
-  padding: 0;
-  background-size: cover;
+  /* margin: 0; */
+  /* padding: 0; */
+  background-size: 50%;
   position: fixed;
-  z-index: -1;
-  font-family: 'Roboto', sans-serif;
+  /* z-index: -1; */
+ 
 
 }
 
@@ -113,7 +113,7 @@
 
     .forgotten-password-button {
         
-        color: #bed0be; /* Green text color */
+        color: #314e31; /* Green text color */
         display: block;
         margin-left: 118px;
         font-size: 15px;

@@ -45,6 +45,7 @@ const postShift = async (newShift) => {
 
   return (
   <div className="portal-container">
+    <img className="portal-background" src="/Rainforest.jpeg"></img>
     <div className="header">
     <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
     <h1 className="logo-header">Rainforest Retail</h1>

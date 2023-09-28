@@ -50,7 +50,7 @@ const handleFormSubmit = async (event) => {
         <div>
             <div className="login-container">
     
-            <img className="background-image" src="/Rainforest background.jpg"></img>
+            <img className="background-image" src="/Rainforest.jpeg"></img>
                 <div className="login-form">
             <img className="login-logo" src="/rainforest retail.png"></img>
             <h1 className="login-title">Portal Login</h1>
