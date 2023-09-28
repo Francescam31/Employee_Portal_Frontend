@@ -9,6 +9,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import '../PortalContainer.css';
 import { IonIcon } from '@ionic/react';
 import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
+import "../ThemeButton.css";
 
 const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme}) => {
   const [shifts, setShifts] = useState([]);
@@ -75,6 +76,7 @@ const toggleSidebar = () => {
       <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
      
       </div>
+      {/* dark and light mode theme button */}
       <button className="mode-btn"onClick={toggleTheme}>{theme} mode</button>
     </div>
     
@@ -115,7 +117,7 @@ const toggleSidebar = () => {
    </div> {/*component-tiles */}
 
   <div className={`team-box-${theme}`}>
-      <EmployeeList loggedInEmployee={loggedInEmployee}/> 
+      <EmployeeList theme={theme} loggedInEmployee={loggedInEmployee}/> 
       </div>
     
        </div> {/*page-elements */}

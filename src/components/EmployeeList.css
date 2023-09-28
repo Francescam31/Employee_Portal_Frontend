@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-
+    margin-left: 2vh;
 }
 
 .employee-list li{
     padding-right: 200px;
 }
+

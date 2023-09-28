@@ -3,21 +3,23 @@ import "./Modal.css";
 import * as AiIcons from "react-icons/ai";
 
 
-function Modal({closeModal,loggedInEmployee,index}) {
+function Modal({closeModal,loggedInEmployee,index,theme}) {
     console.log(loggedInEmployee.department.employees.name);
 
 
 
 
-    return <div className="modal-background">
-        <div className="modal-container">
-            <div className="title-close-btn">
+    return <div className= {`modal-background-${theme}`}>
+        <div className={`modal-container-${theme}`}>
+            <div className={`title-close-btn-${theme}`}>
                 <button onClick={()=>{closeModal(false);
                 }}>X</button>
              </div>
                 <div className="m-title">
                     <h2>{loggedInEmployee.department.employees[index].name}</h2>
                     <p>{loggedInEmployee.department.employees[index].jobTitle.toLowerCase()}</p>
+                    <img className="modal-image" src={`./jobimages/capstone-${loggedInEmployee.department.employees[index].jobTitle}.png`}></img>
+                   
                     {/* <h3>Employee details</h3> */}
                 </div>
                 <div className="m-body">

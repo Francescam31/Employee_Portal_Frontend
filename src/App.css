@@ -64,7 +64,7 @@
   aspect-ratio: 1;
 }
 
-    .login-container {
+.login-container {
         display: flex; 
         flex-direction: column; 
         justify-content: center; 
@@ -73,7 +73,7 @@
        
     }
 
-    .login-form {
+.login-form {
         background: transparent;
         border: 2px solid rgba(255, 255, 255, .5);
         backdrop-filter: blur(20px); 
@@ -85,26 +85,26 @@
         max-width: 500px;
       
         
-    }
+  }
 
-    .login-logo {
+  .login-logo {
         max-width: 100px;
         margin-bottom: 20px;
         border-radius: 10%;
     }
 
-    .login-title {
+.login-title {
         font-size: 24px;
         font-weight: bold;
     }
 
-    .welcome-text {
+ .welcome-text {
         font-weight: bold;
     }
 
 
 
-    .input {
+.input {
         width: 50%;
         padding: 10px;
         margin: 10px 0;
@@ -113,11 +113,11 @@
         text-align: center;
     }
 
-    .hr {
+.hr {
       visibility: hidden;
     }
 
-    .forgotten-password-button {
+.forgotten-password-button {
         
         color: #314e31; /* Green text color */
         display: block;
@@ -127,7 +127,7 @@
         
     }
 
-    .login-button {
+.login-button {
         background-color: #044304; /* Green background color */
         color: #ffffff; /* White text color */
         border: none;
@@ -138,7 +138,7 @@
     }
 
 
-  .footer {
+.footer {
     /* display: flex; */
     align-content: flex-end;
     /* margin-top: auto; */

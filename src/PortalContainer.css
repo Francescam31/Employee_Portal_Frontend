@@ -164,6 +164,7 @@
     box-sizing: border-box;
     padding: 5px;
     border: 1px solid #000;
+    padding-left: 50px;
     
 
 }
@@ -208,6 +209,8 @@
     box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
     /* padding-left: 50px; */
     border: 1px solid #000;
+    padding-left: 50px;
+    margin-left: 63px;
 }
 
 /* team box dark mode */
@@ -222,5 +225,7 @@
     box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
     /* padding-left: 50px; */
     border: 1px solid #000;
+    padding-left: 50px;
+    margin-left: 63px;
 }
 

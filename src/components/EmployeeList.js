@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./EmployeeList.css";
 
 
-const EmployeeList = ({loggedInEmployee}) => {
+const EmployeeList = ({loggedInEmployee,theme}) => {
 
     const [openModals, setOpenModals] = useState(Array(loggedInEmployee.department.employees.length).fill(false));
 
@@ -30,7 +30,7 @@ const EmployeeList = ({loggedInEmployee}) => {
                 onClick={()=>{toggleModal(index)}
                 }
                 >Open</button>
-                {openModals[index] && <Modal index={index} loggedInEmployee={loggedInEmployee} closeModal={()=>{toggleModal(index)}}/>}
+                {openModals[index] && <Modal theme={theme} index={index} loggedInEmployee={loggedInEmployee} closeModal={()=>{toggleModal(index)}}/>}
              </li>
             ))}</ul>
             </>

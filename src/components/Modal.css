@@ -1,6 +1,5 @@
-.modal-background {
-    width: 50vw;
-    height: 50vh;
+.modal-background-light {
+ 
     /* background-color: rgba(200, 200, 200); */
     /* absolute only one can pop up */
     /* position: absolute; */
@@ -9,8 +8,11 @@
     align-items: center;
   }
   
-.modal-container {
-    /* position: absolute; */
+.modal-container-light {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
     width: 500px;
     height: 500px;
     border-radius: 12px;
@@ -20,14 +22,15 @@
     flex-direction: column;
     padding: 25px;
   }
+
   
-.modal-container .m-title {
+.modal-container-light .m-title {
     display: inline-block;
     text-align: center;
     margin-top: 10px;
   }
   
-.title-close-btn {
+.title-close-btn-light {
     display: flex;
     justify-content: flex-end;
   }
@@ -39,7 +42,7 @@
     cursor: pointer;
   }
   
-.modal-container .m-body {
+.modal-container-light .m-body {
     /* flex: 50%; */
     /* display: flex; */
     /* justify-content: center; */
@@ -49,14 +52,14 @@
     /* text-align: center; */
   }
   
-.modal-container .m-footer {
+.modal-container-light .m-footer {
     flex: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-.modal-container .m-footer button {
+.modal-container-light .m-footer button {
     width: 150px;
     height: 45px;
     margin: 10px;
@@ -71,4 +74,85 @@
   
 #cancel-btn {
     background-color: crimson;
+}
+
+
+.modal-image{
+  width: 100px;
+  height: 100px;
+}
+
+/* dark mode settings */
+
+
+
+.modal-background-dark {
+  /* background-color: rgba(200, 200, 200); */
+  /* absolute only one can pop up */
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container-dark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: rgb(45, 45, 45);
+  box-shadow: rgba(222, 219, 219, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 25px;
+}
+
+.modal-container-dark .m-title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.title-close-btn-dark {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title-close-btn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal-container-dark .m-body {
+  padding: 50px;
+}
+
+.modal-container-dark .m-footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container-dark .m-footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: rgb(12, 27, 55);
+  color: white;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: -5px 4px 4px rgb(133, 126, 126);
+}
+
+#cancel-btn {
+  background-color: crimson;
 }
