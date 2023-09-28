@@ -20,7 +20,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 20px;
   }
 
   
@@ -46,7 +46,7 @@
     /* flex: 50%; */
     /* display: flex; */
     /* justify-content: center; */
-    padding: 50px;
+    padding: 20px;
     /* align-items: center; */
     /* font-size: 1.7rem; */
     /* text-align: center; */
@@ -130,7 +130,7 @@
 }
 
 .modal-container-dark .m-body {
-  padding: 50px;
+  padding: 20px;
 }
 
 .modal-container-dark .m-footer {
