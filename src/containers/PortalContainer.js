@@ -9,6 +9,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import '../PortalContainer.css';
 import { IonIcon } from '@ionic/react';
 import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
+import MonthlyWage from "../components/MonthlyWage";
 
 const PortalContainer = ({loggedInEmployee, updateShifts}) => {
   const [shifts, setShifts] = useState([]);
@@ -34,16 +35,21 @@ const postShift = async (newShift) => {
   const savedShift = await response.json();
   updateShifts(savedShift)
 }
-
-
 //   console.log(employee);
 
+// Sidebar
 const [openSidebar, setOpenSidebar] = useState(false);
 
 const toggleSidebar = () => {
   if(openSidebar){setOpenSidebar(false);}
   else{setOpenSidebar(true);} 
 }
+
+
+
+
+
+
 
   if(!loggedInEmployee) {
     return (
@@ -61,6 +67,7 @@ const toggleSidebar = () => {
     <div className="header">
 
     <FaBars onClick={toggleSidebar} className="sidebar-button" ></FaBars>
+
     <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
     <h1 className="logo-header">Rainforest Retail</h1>
     <img className="logo-image" src="/rainforest retail.png"></img>
@@ -108,8 +115,12 @@ const toggleSidebar = () => {
 
   </div>
 
-  <div className="team-box">
+      <div className="team-box">
       <EmployeeList loggedInEmployee={loggedInEmployee}/> 
+      </div>
+
+      <div className="current-month-wage">
+        <MonthlyWage loggedInEmployee={loggedInEmployee} shift/>
       </div>
     
       </div>
