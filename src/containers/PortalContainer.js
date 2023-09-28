@@ -10,7 +10,7 @@ import '../PortalContainer.css';
 import { IonIcon } from '@ionic/react';
 import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
 
-const PortalContainer = ({loggedInEmployee, updateShifts}) => {
+const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, setTheme}) => {
   const [shifts, setShifts] = useState([]);
   
 
@@ -76,9 +76,9 @@ const toggleSidebar = () => {
       </div>
   
     </div>
-
+    
 <div className="portal-page">
-
+<button onClick={toggleTheme}> mode</button>
     <div className="sidebar-container">
         
         {openSidebar &&  <Sidebar setOpenSidebar={setOpenSidebar}/>}

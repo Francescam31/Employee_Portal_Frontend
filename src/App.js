@@ -9,12 +9,27 @@ function App() {
 
   const [loggedInEmployee, setloggedInEmployee] = useState(null);
 
-  //create function that sets loggedInEmployee
-  // pass down function to loginForm
+  // dark mode theme state
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+
+  const toggleTheme = () => {
+    const theme = localStorage.getItem("theme")
+    const oppositeTheme = theme && theme == "dark" ? "light" : "dark";
   
+    console.log('oppositeTheme', oppositeTheme);
+    localStorage.setItem(
+        "theme",oppositeTheme
+      )
+    setTheme(oppositeTheme);
+  }
+
+  // set logged in employee
+
   const setEmployeeLogin = (login) => {
     setloggedInEmployee(login)
   }
+
+  // update shift to the employee id
 
   const updateShifts = (newShift) => {
     const updatedEmployee = {...loggedInEmployee};
@@ -22,14 +37,12 @@ function App() {
     setloggedInEmployee(updatedEmployee)
   }
 
-  // const loggedInEmployeeId = loggedInEmployee.id;
-
   return (
-    <div>
+    <div className={`App-${theme}`}>
     <BrowserRouter>
     <Routes>
       <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
-      <Route path="/portal" element={<PortalContainer loggedInEmployee={loggedInEmployee} updateShifts={updateShifts}/>} />
+      <Route path="/portal" element={<PortalContainer setTheme={setTheme} toggleTheme={toggleTheme} loggedInEmployee={loggedInEmployee} updateShifts={updateShifts}/>} />
     </Routes>
     </BrowserRouter>
     </div>
