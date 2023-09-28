@@ -7,5 +7,9 @@
 
 .employee-list li{
     padding-right: 200px;
+    list-style: none;
 }
 
+.open-modal-btn {
+    margin-left: 20px;
+}

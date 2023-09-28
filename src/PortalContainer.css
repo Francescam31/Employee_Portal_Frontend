@@ -237,7 +237,7 @@
 .current-month-wage-light {
     width: 500px;
     height: 500px;
-    background-color: rgb(185, 218, 217);;
+    background-color: rgb(185, 218, 185);
     margin: 10px;
     border-radius: 10px;
     /* border: 2px solid rgba(58, 158, 128, 0.5); */
