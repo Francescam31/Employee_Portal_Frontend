@@ -1,5 +1,6 @@
 import Modal from "./Modal";
 import { useState } from "react";
+import "./EmployeeList.css";
 
 
 const EmployeeList = ({loggedInEmployee}) => {
@@ -24,7 +25,7 @@ const EmployeeList = ({loggedInEmployee}) => {
             <>
             <h3>My Department: {loggedInEmployee.department.name}</h3>
             <ul className="employee-list">{loggedInEmployee.department.employees.map((employee, index) => (
-             <li key = {index}>{loggedInEmployee.id===employee.id ? employee.name +"(You)" :employee.name }
+             <li className="li-element" key = {index}>{loggedInEmployee.id===employee.id ? employee.name + " (You)" :employee.name }
                 <button className="open-modal-btn"  
                 onClick={()=>{toggleModal(index)}
                 }

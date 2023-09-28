@@ -1,0 +1,9 @@
+.employee-list{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.employee-list li{
+    padding-right: 200px;
+}
