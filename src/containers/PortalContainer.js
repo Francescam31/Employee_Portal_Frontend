@@ -61,15 +61,18 @@ const toggleSidebar = () => {
     <div className="header">
 
     <FaBars onClick={toggleSidebar} className="sidebar-button" ></FaBars>
-    <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
-    <h1 className="logo-header">Rainforest Retail</h1>
-    <img className="logo-image" src="/rainforest retail.png"></img>
 
+    
+    <div className="logo">
+    <h1 className="logo-header" >Rainforest Retail</h1>
+    <img className="logo-image" src="/rainforest retail.png"></img>
+    </div>
 
     <div className="header-icons">
       <IonIcon icon={mailOutline}/>
       <IonIcon icon={homeOutline}/>
-      <IonIcon icon={settingsOutline}/>
+      <IonIcon icon={settingsOutline}/>    
+      <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
       </div>
   
     </div>
@@ -86,33 +89,36 @@ const toggleSidebar = () => {
     <div className="employee">
       <Employee loggedInEmployee={loggedInEmployee}/> 
       </div>
+
       <div className="component-tiles">
-    <div className="box">
+      
+      <div className="calendar-box"> 
+        <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
+      </div>
+
+<div className="shift-boxes"> 
+      <div className="box" id="box1">
+      <ShiftForm postShift={postShift} /> 
+      </div>
+
+    <div className="box" id="box2">
             <div className="shift-title">
-                <h2>Shifts</h2>
+                <h2>Shift History</h2>
             </div>
         <ul className="shifts-list">
                 {loggedInEmployee.shifts.map((shift, index) => (
                     <li key={index}>{shift.date}:{shift.type}</li>
                 ))}
         </ul>
-        </div>
-      
-      <div className="box"> 
-        <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
       </div>
-
-      <div className="box">
-      <ShiftForm postShift={postShift} /> 
-      </div>
-
-  </div>
+</div>
+   </div> {/*component-tiles */}
 
   <div className="team-box">
       <EmployeeList loggedInEmployee={loggedInEmployee}/> 
       </div>
     
-      </div>
+       </div> {/*page-elements */}
 
       </div>
 

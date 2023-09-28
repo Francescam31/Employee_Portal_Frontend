@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
 .portal-container {
-    padding-top:100px;
+    padding-top: 120px;
     /* display: flex; */
     
     
@@ -22,21 +24,33 @@
     /* left: 0; */
     width: 100%;
     padding: 5px 30px;
-    background: rgb(185, 218, 185);
-    display: flex;
+    background: rgb(185, 218, 217);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* justify-content: space-around; */
+    align-items: center;
     /* z-index: 20; */
     
 }
- 
+
+.logo {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding-left: 100px; */
+    font-size: x-large;
+}
+
+.logo-header {
+    font-family: 'Dela Gothic One', cursive;
+}
 
 .logo-image {
     max-width: 100px;
     /* margin-bottom: 20px; */
     margin-left: 20px;
-    border-radius:40%;
-
-    
-
+    /* border-radius:20%; */
+    padding-left: 20px;
 }
 
 .header-icons ion-icon {
@@ -46,7 +60,7 @@
 .header-icons {
     position: fixed;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     display: flex;
     margin-left: 85%;
 
@@ -55,12 +69,11 @@
 
 /* logout button */
 .logout-button {
-    position: fixed;
+    /* position: fixed; */
     top: 5px;
     right: 1%;
     /* padding: 0; */
     /* margin: 0; */
-    font-size: 2rem;
     color: white;
 }
 
@@ -68,33 +81,66 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 .component-tiles {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding-left: 50px;
+    
+    /* justify-content: center; */
     /* flex-direction: column;
     align-items: center; */
+}
+
+.shift-boxes {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.calendar-box {
+    grid-column: span 2;
+    width: 1000px;
+    /* height: 500px; */
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    
 }
 
 .box {
     
     width: 500px;
     height: 500px;
-    background-color: rgb(185, 218, 185);
+    background-color: rgb(185, 218, 217);;
     margin: 10px;
     border-radius: 10px;
     /* border: 2px solid rgba(58, 158, 128, 0.5); */
     flex: 1;
     box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
     box-sizing: border-box;
-   
+    padding: 5px;
+    border: 1px solid #000;
     
 
 }
 
+#box1 {
+    flex-grow: 1;
+}
+
+#box2 {
+    flex-grow: 2;
+}
+
 .team-box {
-    width: 500px;
+    width: 1500px;
     height: 500px;
     background-color: rgb(185, 218, 185);
     margin: 10px;
@@ -102,4 +148,6 @@
     flex: 1;
     box-sizing: border-box;
     box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    /* padding-left: 50px; */
+    border: 1px solid #000;
 }

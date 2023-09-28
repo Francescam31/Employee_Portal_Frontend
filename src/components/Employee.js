@@ -24,9 +24,11 @@ return(
 
         <h3 className="employee-department-name">Department: {loggedInEmployee.department.name}</h3>
         <h4 className="employee-jobtitle">{loggedInEmployee.jobTitle}</h4>
+        
+        <div className="employee-details">
         <p>Contact Number: {loggedInEmployee.contactNumber}</p>
         <p>Wage: £{loggedInEmployee.hourlyWage}ph</p>
-        
+        </div>
         
     </div>
     </div>
