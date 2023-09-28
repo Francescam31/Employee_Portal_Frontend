@@ -22,7 +22,8 @@ const MonthlyWage = ({loggedInEmployee}) => {
     return (
         <>
             <h2>{d.toLocaleString("default", {month:"long"})}'s earnings</h2>
-            <p>£{monthlyWage}</p>
+            <p>For {monthlyWage/(8*loggedInEmployee.hourlyWage)} shifts:</p>
+            <p>Projected earnings: £{monthlyWage}</p>
         </>
     )
 
