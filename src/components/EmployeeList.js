@@ -23,7 +23,7 @@ const EmployeeList = ({loggedInEmployee}) => {
     if(loggedInEmployee){
         return(
             <>
-            <h3>My Department: {loggedInEmployee.department.name}</h3>
+            <h3>My Team</h3>
             <ul className="employee-list">{loggedInEmployee.department.employees.map((employee, index) => (
              <li className="li-element" key = {index}>{loggedInEmployee.id===employee.id ? employee.name + " (You)" :employee.name }
                 <button className="open-modal-btn"  
