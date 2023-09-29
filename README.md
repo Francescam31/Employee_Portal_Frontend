@@ -31,7 +31,7 @@ Our solution was to built a multiple functional employee portal that aims to dig
 
 
 
-### Wireframe
+### Wireframes
 <img src="./diagrams/capstone-WIREFRAME.png"></img>
 
 <div style="width: 70%; height:50%; overflow: hidden;">
@@ -55,7 +55,7 @@ https://github.com/GeorgiaCD/Employee_Portal_Backend
 <img src="./diagrams/page2-screenshot.png"></img>
 </div>
 <h4>Employee Detail Modals</h4>
-<div style="width: 60%; height:40%; overflow: hidden;">
+<div style="width: 50%; height:30%; overflow: hidden;">
 <img src="./diagrams/modal-screenshot-light.png"></img>
 
 
