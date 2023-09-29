@@ -5,7 +5,7 @@
 - Georgia Crawford-Dellar (GitHub: [GeorgiaCD](https://github.com/GeorgiaCD))
 - Francesca (GitHub: [Francescam31](https://github.com/Francescam31))
 - Amélie (GitHub: [amelieboydshire](https://github.com/amelieboydshire))
-- Blezzy Dela Cruz (GitHub: [blezzydcruz]((https://github.com/blezzydcruz)))
+- Blezzy Dela Cruz (GitHub: [blezzydcruz](https://github.com/blezzydcruz))
 
 
 ### Table of Contents
