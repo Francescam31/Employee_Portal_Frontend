@@ -16,7 +16,7 @@ if(!loggedInEmployee){
 
 return(
     <div className="employee-box">
-        <img className="user-icon" src="/user icon.png"></img>
+        <img className="user-icon" src="/user.png"></img>
         
         <div className="employee-info">
 

@@ -82,7 +82,7 @@ const toggleSidebar = () => {
     
     <div className="logo">
     <h1 className="logo-header" >Rainforest Retail</h1>
-    <img className="logo-image" src="/rainforest retail.png"></img>
+    <img className="logo-image" src="/croc logo.png"></img>
     <h1 className="logo-header" >Employee Portal</h1>
     </div>
 

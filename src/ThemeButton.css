@@ -1,6 +1,8 @@
 .mode-btn{
-    --color: #560bad;
-    /* font-family: inherit; */
+    /* --color: #37594b; */
+    --color: black;
+    color: white;
+     /* font-family: inherit; */
     display: inline-block;
     width: 8em;
     height: 2em;
@@ -19,6 +21,7 @@
     margin-top: 20px; */
     padding-bottom: 20px;
     font-style:italic;
+    margin-top: -20px;
    }
    
 .mode-btn:before {
