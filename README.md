@@ -73,3 +73,9 @@ https://github.com/GeorgiaCD/Employee_Portal_Backend
 
 
 # Tech Stack
+### React
+React libraries 
+- react-router-dom
+- react-big-calendar
+- react-icons
+- ionicons
