@@ -1,5 +1,13 @@
 # Employee Portal - React app 
 
+## **_Collaborators_**
+
+- Georgia Crawford-Dellar (GitHub: [GeorgiaCD](https://github.com/GeorgiaCD))
+- Francesca (GitHub: [Francescam31](https://github.com/Francescam31))
+- Amélie (GitHub: [amelieboydshire](https://github.com/amelieboydshire))
+- Blezzy Dela Cruz (GitHub: [blezzydcruz]((https://github.com/blezzydcruz)))
+
+
 ### Table of Contents
 
 1. [Description](#description)
@@ -55,10 +63,11 @@ https://github.com/GeorgiaCD/Employee_Portal_Backend
 <img src="./diagrams/page2-screenshot.png"></img>
 </div>
 <h4>Employee Detail Modals</h4>
+<h4>Light Mode</h4>
 <div style="width: 50%; height:30%; overflow: hidden;">
 <img src="./diagrams/modal-screenshot-light.png"></img>
 
-
+<h4>Dark Mode</h4>
 <img src="./diagrams/modal-screenshot-dark.png"></img>
 </div>
 
