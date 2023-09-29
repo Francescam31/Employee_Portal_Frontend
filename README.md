@@ -65,10 +65,10 @@ https://github.com/GeorgiaCD/Employee_Portal_Backend
 <h4>Employee Detail Modals</h4>
 <h4>Light Mode</h4>
 <div style="width: 50%; height:30%; overflow: hidden;">
-<img src="./diagrams/modal-screenshot-light.png"></img>
+<!-- <img src="./diagrams/modal-screenshot-light.png"></img> -->
 
 <h4>Dark Mode</h4>
-<img src="./diagrams/modal-screenshot-dark.png"></img>
+<!-- <img src="./diagrams/modal-screenshot-dark.png"></img> -->
 </div>
 
 
