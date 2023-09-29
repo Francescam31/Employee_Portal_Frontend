@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Employee Portal - React app 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Table of Contents
 
-## Available Scripts
+1. [Description](#description)
+2. [The app's functions](#the-apps-functions)
+3. [Components & Container Description](#components--container-description)
+4. [Components Diagram](#components-diagram)
+5. [Wireframe](#wireframe)
+6. [API](#api)
+7. [Demo video](#demon-video)
+8. [Screenshots](#screenshots)
+9. [Tech Stack](#tech-stack)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+This project aimed to solve the inefficient record handling and the data discrepancies the company had. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Our solution was to built a multiple functional employee portal that aims to digitises employees records and schedules. In additon to viewing and editing their schedule employees have the ability to view shift history, view their projected earning for the current month and have a directory that displayed the contact details of the other employees in their department. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## The app's functions
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Components & Container Description 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Components Diagram
+<img src="./diagrams/capstone-COMPONENTS.png"></img>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Wireframe
+<img src="./diagrams/capstone-WIREFRAME.png"></img>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div style="width: 70%; height:50%; overflow: hidden;">
+<img src="./diagrams/wireframe.png"></img>
+</div>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### API
 
-## Learn More
+https://github.com/GeorgiaCD/Employee_Portal_Backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Demo video
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
+<h4>Login Page</h4>
+<img src="./diagrams/login-screenshot.png"></img>
 
-### Code Splitting
+<h4>Portal Page</h4>
+<div style="width: 100%;  overflow: hidden;">
+<img src="./diagrams/page1-screenshot.png"></img>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img src="./diagrams/page2-screenshot.png"></img>
+</div>
+<h4>Employee Detail Modals</h4>
+<div style="width: 60%; height:40%; overflow: hidden;">
+<img src="./diagrams/modal-screenshot-light.png"></img>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="./diagrams/modal-screenshot-dark.png"></img>
+</div>
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Tech Stack
