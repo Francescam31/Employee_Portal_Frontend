@@ -22,7 +22,11 @@
 
 ## Description
 
-This project aimed to solve the inefficient record handling and the data discrepancies the company had. 
+This project aimed to solve the inefficient record handling and the data discrepancies the company had by creating a full-stack application. 
+
+We were given a buisness case and decided to solve the two following problems the company faced : 
+1. Employee details are kept in paper records at head office
+2. Separate diaries are used to keep track of holidays, changes in assignment and other important dates
 
 Our solution was to built a multiple functional employee portal that aims to digitises employees records and schedules. In additon to viewing and editing their schedule employees have the ability to view shift history, view their projected earning for the current month and have a directory that displayed the contact details of the other employees in their department. 
 
