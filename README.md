@@ -1,4 +1,4 @@
-# Employee Portal - React app 
+# Employee Portal - FRONT END React app 
 
 ## **_Collaborators_**
 
