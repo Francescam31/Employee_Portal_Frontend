@@ -11,7 +11,7 @@
 ### Table of Contents
 
 1. [Description](#description)
-2. [The app's functions](#the-apps-functions)
+2. [The app's functions](#the-apps-functions-functionalities)
 3. [Components & Container Description](#components--container-description)
 4. [Components Diagram](#components-diagram)
 5. [Wireframe](#wireframe)
@@ -30,9 +30,24 @@ We were given a buisness case and decided to solve the two following problems th
 
 Our solution was to built a multiple functional employee portal that aims to digitises employees records and schedules. In additon to viewing and editing their schedule employees have the ability to view shift history, view their projected earning for the current month and have a directory that displayed the contact details of the other employees in their department. 
 
-## The app's functions
+## The app's functions/ functionalities
+
+<ul>
+<li> Login form with user authentication</li>
+<li> Profile section that displays the properties of the employee </li>
+<li> Calendar prepopulated with shift events from the API</li>
+<li> Form to post shifts to the API and therefore the calendar</li>
+<li> List that displays shits in the past </li>
+<li> Current months predicted earnings based of the amount of shifts and the pay of the employee</li>
+<li> List of other employees in that department with a modal which displays contact details</li>
+<li> Dark/light mode button</li>
+<li> Sidebar modal </li>
+<li> Log out buttons that navigate you to the log in page </li>
+
+</ul>
 
 
+<hr>
 
 ## Components & Container Description 
 
