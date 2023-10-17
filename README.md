@@ -1,5 +1,12 @@
 # Employee Portal - FRONT END React app 
 
+# Setup Instructions 
+Server-side API Instructions:
+
+### Ensure the following are installed on your machine:
+
+- Intellij IDEA (running with JDK 17)
+
 ## **_Collaborators_**
 
 - Georgia Crawford-Dellar (GitHub: [GeorgiaCD](https://github.com/GeorgiaCD))
