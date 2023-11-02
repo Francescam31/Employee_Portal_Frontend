@@ -8,7 +8,7 @@ import EmployeeCalendar from "../components/EmployeeCalendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import '../PortalContainer.css';
 import { IonIcon } from '@ionic/react';
-import { calendar, home, logOutOutline, people, settingsSharp} from 'ionicons/icons';
+import { calendar, home, logOut, people, settingsSharp} from 'ionicons/icons';
 import "../ThemeButton.css";
 import MonthlyWage from "../components/MonthlyWage";
 import { Link} from "react-scroll";
@@ -101,7 +101,7 @@ const postShift = async (newShift) => {
           <IonIcon icon={people} />
         </Link>
         <IonIcon icon={settingsSharp}/>    
-        <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
+        <a href="/" className="logout-button"><IonIcon icon={logOut}/></a>
       </div>
     
     {/* </div> */}
