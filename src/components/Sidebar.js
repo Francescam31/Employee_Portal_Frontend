@@ -9,7 +9,8 @@ const Sidebar = ({setOpenSidebar,theme}) => {
 
 return (
     <div className={`sidebar-${theme}`}>
-        <p className={`sidebar-p-${theme}`}><BsIcons.BsFillPersonVcardFill /> Dashboard</p>
+        <a href="/portal" className={`sidebar-p-${theme}`}><BsIcons.BsFillPersonVcardFill /> Dashboard</a>
+        <a href="/notifications" className={`sidebar-p-${theme}`}><BsIcons.BsFillPersonVcardFill /> Messages</a>
         <p className={`sidebar-p-${theme}`}><BsIcons.BsCalendar3 /> Calendar</p>
         <p className={`sidebar-p-${theme}`}><BsIcons.BsFillPeopleFill /> My Team</p>
         <p className={`sidebar-p-${theme}`}><FaIcons.FaMoneyCheckAlt /> Payroll</p>

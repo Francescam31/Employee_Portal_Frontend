@@ -10,10 +10,18 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
     let events = [];
     let startNumber;
     let endNumber;
-   
+
+    // const map = {
+    //   "MORNING": () => {
+    //     startNumber = 9;
+    //     endNumber = 5;
+    //   }
+    // }
+    
     for(let i= 0; i<loggedInEmployee.shifts.length; i++){
       
-
+        // map[loggedInEmployee.shifts[i].type]();
+        
         if(loggedInEmployee.shifts[i].type == "MORNING"){
           startNumber = 9;
           endNumber = 5;

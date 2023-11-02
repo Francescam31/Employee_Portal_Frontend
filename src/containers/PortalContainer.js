@@ -12,7 +12,7 @@ import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionico
 import "../ThemeButton.css";
 import MonthlyWage from "../components/MonthlyWage";
 
-const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme}) => {
+const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme, openSidebar, toggleSidebar}) => {
   const [shifts, setShifts] = useState([]);
   const [shiftHistory, setShiftHistory] = useState([]);
 
@@ -40,12 +40,12 @@ const postShift = async (newShift) => {
 
 //   console.log(employee);
 
-const [openSidebar, setOpenSidebar] = useState(false);
+// const [openSidebar, setOpenSidebar] = useState(false);
 
-const toggleSidebar = () => {
-  if(openSidebar){setOpenSidebar(false);}
-  else{setOpenSidebar(true);} 
-}
+// const toggleSidebar = () => {
+//   if(openSidebar){setOpenSidebar(false);}
+//   else{setOpenSidebar(true);} 
+// }
 
   
   useEffect(() => {
@@ -79,20 +79,23 @@ const toggleSidebar = () => {
 
       <FaBars onClick={toggleSidebar} className="sidebar-button" ></FaBars>
 
+    {/* <div className="page-header"> */}
       
       <div className="logo">
-      <h1 className="logo-header" >Rainforest Retail</h1>
-      <img className="logo-image" src="/croc logo.png"></img>
-      <h1 className="logo-header" >Employee Portal</h1>
+        <h1 className="logo-header" >Rainforest Retail</h1>
+        <img className="logo-image" src="/croc logo.png"></img>
+        <h1 className="logo-header" >Employee Portal</h1>
       </div>
 
       <div className="header-icons">
-        <IonIcon icon={mailOutline}/>
-        <IonIcon icon={homeOutline}/>
-        <IonIcon icon={settingsOutline}/>    
-        <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
-      
-        </div>
+          <IonIcon icon={mailOutline}/>
+          <IonIcon icon={homeOutline}/>
+          <IonIcon icon={settingsOutline}/>    
+          <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
+      </div>
+    
+    {/* </div> */}
+
         {/* dark and light mode theme button */}
         <button className="mode-btn"onClick={toggleTheme}>{theme} mode</button>
       </div>
@@ -100,7 +103,7 @@ const toggleSidebar = () => {
 <div className="portal-page">
     <div className={`"sidebar-container-${theme}`}>
         
-        {openSidebar &&  <Sidebar theme={theme} setOpenSidebar={setOpenSidebar}/>}
+        {openSidebar &&  <Sidebar theme={theme} openSidebar={openSidebar}/>}
     </div>
 
 <div className="page-elements">

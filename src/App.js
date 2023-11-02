@@ -3,6 +3,7 @@ import LoginForm from "./components/LoginForm";
 import { useState } from "react";
 import PortalContainer from "./containers/PortalContainer";
 import {BrowserRouter, Routes, Route, NavLink} from 'react-router-dom';
+import NotificationContainer from "./containers/NotificationContainer";
 
 
 function App() {
@@ -37,12 +38,19 @@ function App() {
     setloggedInEmployee(updatedEmployee)
   }
 
+  const [openSidebar, setOpenSidebar] = useState(false);
+
+  const toggleSidebar = () => {
+    if(openSidebar){setOpenSidebar(false);}
+    else{setOpenSidebar(true);} 
+  }
   return (
     <div className={`App-${theme}`}>
     <BrowserRouter>
     <Routes>
       <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
-      <Route path="/portal" element={<PortalContainer theme={theme} toggleTheme={toggleTheme} loggedInEmployee={loggedInEmployee} updateShifts={updateShifts}/>} />
+      <Route path="/portal" element={<PortalContainer theme={theme} toggleTheme={toggleTheme} loggedInEmployee={loggedInEmployee} openSidebar={openSidebar} toggleSidebar={toggleSidebar} updateShifts={updateShifts}/>} />
+      <Route path="/notifications" element={<NotificationContainer theme={theme} toggleTheme={toggleTheme} toggleSidebar={toggleSidebar} openSidebar={openSidebar} loggedInEmployee={loggedInEmployee} />} />
     </Routes>
     </BrowserRouter>
     </div>
