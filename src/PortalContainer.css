@@ -36,6 +36,7 @@
     /* left: 0; */
     width: 100%;
     padding: 5px 30px;
+    padding-bottom: 15px;
     background: rgb(190, 200, 173, 1);
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -91,7 +92,7 @@
 
 .header-icons {
     position: fixed;
-    color: white;
+    color: rgb(85, 83, 83);
     font-size: 2.5rem;
     display: flex;
     margin-left: 85%;
@@ -120,6 +121,7 @@
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-top: 40px;
 }
 
 .component-tiles {

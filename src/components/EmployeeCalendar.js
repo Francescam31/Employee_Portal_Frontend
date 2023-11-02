@@ -1,5 +1,5 @@
 import {Calendar, momentLocalizer} from "react-big-calendar"
-// import "react-big-calendar/lib/css/react-big-calendar.css";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from "moment";
 import "./EmployeeCalendar.css";
 
@@ -52,13 +52,13 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
     <>  
       <div className="calendar-component">
         <h2 className="calendar-title">Calendar</h2>
-        <Calendar className="calendar"
-          localizer={localizer}
-          defaultDate={new Date()}
-          defaultView="month"
-          events={events}
-          style={{ height: "75vh",width: "120vh" }}
-         />
+          <Calendar className="calendar"
+            localizer={localizer}
+            defaultDate={new Date()}
+            defaultView="month"
+            events={events}
+            style={{ height: "75vh",width: "120vh"}}
+          />
          </div>
     </>
     )

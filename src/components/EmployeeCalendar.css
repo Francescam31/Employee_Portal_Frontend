@@ -1,9 +1,12 @@
 .calendar-title{ 
     text-align: center;
+    padding-top: 30px;
 }
 
 .rbc-calendar{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 4vh;
+    /* font-size: x-large; */
 }
+

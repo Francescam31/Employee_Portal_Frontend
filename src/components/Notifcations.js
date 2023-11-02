@@ -18,6 +18,7 @@ const Notifications = () => {
 
     return(
         <div className="notification">
+            <h2>Messages Page</h2>
             <p>Notification</p>
             <div className="message"> text: {message.text}</div>
             <div>

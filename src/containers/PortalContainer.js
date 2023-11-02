@@ -8,9 +8,10 @@ import EmployeeCalendar from "../components/EmployeeCalendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import '../PortalContainer.css';
 import { IonIcon } from '@ionic/react';
-import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
+import { calendar, home, logOutOutline, people, settingsSharp} from 'ionicons/icons';
 import "../ThemeButton.css";
 import MonthlyWage from "../components/MonthlyWage";
+import { Link} from "react-scroll";
 
 const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme, openSidebar, toggleSidebar}) => {
   const [shifts, setShifts] = useState([]);
@@ -88,10 +89,19 @@ const postShift = async (newShift) => {
       </div>
 
       <div className="header-icons">
-          <IonIcon icon={mailOutline}/>
-          <IonIcon icon={homeOutline}/>
-          <IonIcon icon={settingsOutline}/>    
-          <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
+        <Link to="home-hero" spy={true} smooth={true} offset={50} duration={500} > 
+          <IonIcon icon={home}/>
+        </Link>
+
+        <Link to="home-calendar" spy={true} smooth={true} offset={50} duration={500} > 
+          <IonIcon icon={calendar}/>
+        </Link>
+
+        <Link to="home-employee-list" spy={true} smooth={true} offset={50} duration={500} > 
+          <IonIcon icon={people} />
+        </Link>
+        <IonIcon icon={settingsSharp}/>    
+        <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
       </div>
     
     {/* </div> */}
@@ -138,7 +148,7 @@ const postShift = async (newShift) => {
         </div> {/*component-tiles */}
 
         <div className="more-boxes">
-          <div className={`team-box-${theme}`}>
+          <div  id="home-employee-list" className={`team-box-${theme}`}>
             <EmployeeList theme={theme} loggedInEmployee={loggedInEmployee}/> 
           </div>
 
