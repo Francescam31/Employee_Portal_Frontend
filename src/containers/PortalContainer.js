@@ -74,7 +74,7 @@ const postShift = async (newShift) => {
 
   return (
 
-  <div className="portal-container">
+  <div id="home-employee" className="portal-container">
     <img className="portal-background" src="/Rainforest.jpeg"></img>
     <div className={`header-${theme}`}>
 
@@ -89,15 +89,15 @@ const postShift = async (newShift) => {
       </div>
 
       <div className="header-icons">
-        <Link to="home-hero" spy={true} smooth={true} offset={50} duration={500} > 
+        <Link to="home-employee" spy={true} smooth={true} offset={0} duration={500} > 
           <IonIcon icon={home}/>
         </Link>
 
-        <Link to="home-calendar" spy={true} smooth={true} offset={50} duration={500} > 
+        <Link to="home-calendar" spy={true} smooth={true} offset={-220} duration={500} > 
           <IonIcon icon={calendar}/>
         </Link>
 
-        <Link to="home-employee-list" spy={true} smooth={true} offset={50} duration={500} > 
+        <Link to="home-employee-list" spy={true} smooth={true} offset={0} duration={500} > 
           <IonIcon icon={people} />
         </Link>
         <IonIcon icon={settingsSharp}/>    
@@ -110,20 +110,20 @@ const postShift = async (newShift) => {
         <button className="mode-btn"onClick={toggleTheme}>{theme} mode</button>
     </div>
     
-    <div className="portal-page">
+    <div   className="portal-page">
       <div className={`"sidebar-container-${theme}`}>
         {openSidebar &&  <Sidebar theme={theme} openSidebar={openSidebar}/>}
       </div>
 
       <div className="page-elements">
 
-        <div className="employee">
+        <div  className="employee">
           <Employee loggedInEmployee={loggedInEmployee}/> 
         </div>
 
       {/* <div className="component-tiles"> */}
       
-        <div className={`calendar-box-${theme}`}> 
+        <div id="home-calendar" className={`calendar-box-${theme}`}> 
           <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
         </div>
 
