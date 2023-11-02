@@ -57,7 +57,7 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
           defaultDate={new Date()}
           defaultView="month"
           events={events}
-          style={{ height: "50vh",width: "90vh" }}
+          style={{ height: "75vh",width: "120vh" }}
          />
          </div>
     </>

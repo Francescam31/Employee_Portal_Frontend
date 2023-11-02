@@ -141,11 +141,13 @@
 /* calendar light mode */
 .calendar-box-light {
     grid-column: span 2;
-    width: 1000px;
-    /* height: 500px; */
+    width: 90%;
+    height: 40%;
     background-color: rgb(255, 255, 255);
     margin: 10px;
     border-radius: 10px;
+    margin-left: 50px;
+
     flex: 1;
     box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
     box-sizing: border-box;

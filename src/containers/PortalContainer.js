@@ -98,61 +98,60 @@ const postShift = async (newShift) => {
 
         {/* dark and light mode theme button */}
         <button className="mode-btn"onClick={toggleTheme}>{theme} mode</button>
-      </div>
-    
-<div className="portal-page">
-    <div className={`"sidebar-container-${theme}`}>
-        
-        {openSidebar &&  <Sidebar theme={theme} openSidebar={openSidebar}/>}
     </div>
-
-<div className="page-elements">
-
-    <div className="employee">
-      <Employee loggedInEmployee={loggedInEmployee}/> 
-      </div>
-
-      <div className="component-tiles">
-      
-      <div className={`calendar-box-${theme}`}> 
-        <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
-      </div>
-
-<div className="shift-boxes"> 
-      <div className={`box-${theme}`} id="box1">
-      <ShiftForm postShift={postShift} /> 
-      </div>
-
-    <div className={`box-${theme}`} id="box2">
-            <div className="shift-title">
-                <h2>Shift History</h2>
-            </div>
-            <ul className="shifts-list">
-                {shiftHistory.map((shift, index) => ( // shift history
-                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
-                ))} 
-        </ul>
-      </div>
-</div>
-   </div> {/*component-tiles */}
-
-<div className="more-boxes">
-  <div className={`team-box-${theme}`}>
-      <EmployeeList theme={theme} loggedInEmployee={loggedInEmployee}/> 
-      </div>
-
-      <div className={`current-month-wage-${theme}`}>
-        <MonthlyWage loggedInEmployee={loggedInEmployee} shift/>
-      </div>
-      
-</div>
     
-       </div> {/*page-elements */}
-
+    <div className="portal-page">
+      <div className={`"sidebar-container-${theme}`}>
+        {openSidebar &&  <Sidebar theme={theme} openSidebar={openSidebar}/>}
       </div>
 
-</div>
-  
+      <div className="page-elements">
+
+        <div className="employee">
+          <Employee loggedInEmployee={loggedInEmployee}/> 
+        </div>
+
+      {/* <div className="component-tiles"> */}
+      
+        <div className={`calendar-box-${theme}`}> 
+          <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
+        </div>
+
+        <div className="component-tiles">
+          <div className="shift-boxes"> 
+            <div className={`box-${theme}`} id="box1">
+              <ShiftForm postShift={postShift} /> 
+            </div>
+
+            <div className={`box-${theme}`} id="box2">
+              <div className="shift-title">
+                <h2>Shift History</h2>
+              </div>
+              <ul className="shifts-list">
+                  {shiftHistory.map((shift, index) => ( // shift history
+                      <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
+                  ))} 
+              </ul>
+            </div>
+
+          </div>
+        </div> {/*component-tiles */}
+
+        <div className="more-boxes">
+          <div className={`team-box-${theme}`}>
+            <EmployeeList theme={theme} loggedInEmployee={loggedInEmployee}/> 
+          </div>
+
+          <div className={`current-month-wage-${theme}`}>
+            <MonthlyWage loggedInEmployee={loggedInEmployee} shift/>
+          </div>
+
+        </div>
+        
+      </div> {/*page-elements */}
+
+    </div>
+  </div>
   );
 };
 
