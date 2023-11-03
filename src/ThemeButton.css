@@ -44,6 +44,6 @@
    }
    
 .mode-btn:active:before {
-    background: #3a0ca3;
+    background: #7da282;
     transition: background 0s;
    }

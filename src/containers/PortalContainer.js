@@ -82,7 +82,7 @@ const postShift = async (newShift) => {
     return (
       <>
         <p>Return to login</p>
-        <a href="/"><button>Log out</button></a>
+        <a href="/"><button className="general-button" >Log out</button></a>
       </>
     )
   }
@@ -108,7 +108,7 @@ const postShift = async (newShift) => {
           <IonIcon icon={home}/>
         </Link>
 
-        <Link to="home-calendar" spy={true} smooth={true} offset={-220} duration={500} > 
+        <Link to="home-calendar" spy={true} smooth={true} offset={-200} duration={500} > 
           <IonIcon icon={calendar}/>
         </Link>
 
@@ -154,7 +154,7 @@ const postShift = async (newShift) => {
               </div>
               <ul className="shifts-list">
                   {shiftHistory.map((shift, index) => ( // shift history
-                      <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
+                      <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type} <button className="general-button">Delete</button></li>
                   ))} 
               </ul>
             </div>
@@ -166,7 +166,7 @@ const postShift = async (newShift) => {
               </div>
               <ul className="shifts-list">
                   {upcomingShifts.map((shift,index)=> (
-                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
+                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type} <button className="general-button">Delete</button></li>
                   )
                   )}
               </ul>

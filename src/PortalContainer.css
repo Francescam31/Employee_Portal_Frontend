@@ -290,3 +290,16 @@
     padding: 5px;
     border: 1px solid #000;
 }
+
+/* general button style */
+.general-button{
+    width: 5em;
+    transition: color .5s;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    margin-left: 30px;
+    /* margin-top: -20px; */
+}

@@ -12,4 +12,11 @@
 
 .open-modal-btn {
     margin-left: 20px;
+    width: 5em;
+    transition: color .5s;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
 }

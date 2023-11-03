@@ -52,7 +52,7 @@ const ShiftForm = ({postShift, loggedInEmployee}) => {
                 <option value ="AFTERNOON">Afternoon</option>
                 <option value ="EVENING">Evening</option>
                 </select>
-                <button type="submit">Add </button>
+                <button className="button" type="submit">Add </button>
             </form>
         </div>
       )
