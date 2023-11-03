@@ -10,6 +10,7 @@
     /* padding-left: 50px; */
     font-size: x-large;
     padding: 20px;
+    padding-top: 50px;
     margin-top: 25px;
     backdrop-filter: blur(5px); 
 }

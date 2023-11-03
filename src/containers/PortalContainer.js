@@ -16,6 +16,7 @@ import { Link} from "react-scroll";
 const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme, openSidebar, toggleSidebar}) => {
   const [shifts, setShifts] = useState([]);
   const [shiftHistory, setShiftHistory] = useState([]);
+  const [upcomingShifts, setUpcomingShifts] = useState([]);
 
   const fetchShifts = async () => {
   const response = await fetch("http://localhost:8080/shifts");
@@ -48,7 +49,7 @@ const postShift = async (newShift) => {
 //   else{setOpenSidebar(true);} 
 // }
 
-  
+  // shift history  
   useEffect(() => {
     if(loggedInEmployee) {
       let shiftHistoryList = [];
@@ -60,6 +61,20 @@ const postShift = async (newShift) => {
       setShiftHistory(shiftHistoryList);
   }
   }, [loggedInEmployee]);
+
+  // upcoming shift array
+  useEffect(() => {
+    if(loggedInEmployee) {
+      let upcomingShiftList = [];
+      for (let i = 0; i<loggedInEmployee.shifts.length; i++){
+        if(new Date(loggedInEmployee.shifts[i].date) > new Date()){
+          upcomingShiftList .push(loggedInEmployee.shifts[i]);
+        }
+      } upcomingShiftList.sort((a,b) => new Date(a.date) - new Date(b.date));
+      setUpcomingShifts(upcomingShiftList );
+  }
+  }, [loggedInEmployee]);
+
 
 
 
@@ -121,7 +136,6 @@ const postShift = async (newShift) => {
           <Employee loggedInEmployee={loggedInEmployee}/> 
         </div>
 
-      {/* <div className="component-tiles"> */}
       
         <div id="home-calendar" className={`calendar-box-${theme}`}> 
           <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
@@ -133,6 +147,7 @@ const postShift = async (newShift) => {
               <ShiftForm postShift={postShift} /> 
             </div>
 
+      {/* Shift history */}
             <div className={`box-${theme}`} id="box2">
               <div className="shift-title">
                 <h2>Shift History</h2>
@@ -141,6 +156,19 @@ const postShift = async (newShift) => {
                   {shiftHistory.map((shift, index) => ( // shift history
                       <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
                   ))} 
+              </ul>
+            </div>
+
+      {/* Upcoming Shifts */}
+            <div className={`box-${theme}`} id="box2">
+              <div className="shift-title">
+                <h2>Upcoming Shifts</h2>
+              </div>
+              <ul className="shifts-list">
+                  {upcomingShifts.map((shift,index)=> (
+                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
+                  )
+                  )}
               </ul>
             </div>
 
