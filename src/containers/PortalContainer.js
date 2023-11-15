@@ -28,7 +28,7 @@ const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme, op
   fetchShifts();
   }, []);
 
-const postShift = async (newShift) => {
+  const postShift = async (newShift) => {
   newShift.employeeId = loggedInEmployee.id;
   const response = await fetch("http://localhost:8080/shifts", {
     method: "POST",
@@ -39,15 +39,17 @@ const postShift = async (newShift) => {
   updateShifts(savedShift)
 }
 
-
-//   console.log(employee);
-
-// const [openSidebar, setOpenSidebar] = useState(false);
-
-// const toggleSidebar = () => {
-//   if(openSidebar){setOpenSidebar(false);}
-//   else{setOpenSidebar(true);} 
-// }
+  // deleteShift 
+  // takes in the shift id
+  const deleteShift = async (id) => {
+    // delete from the db 
+    await fetch(`http://localhost:8080/shifts/${id}`, {
+      method: "DELETE",
+      headers: {'Content-Type': 'application/json'}
+    })
+    // delete locally
+    updateShifts(shifts.filter((shift) => shift.id !== id));
+  }
 
   // shift history  
   useEffect(() => {
@@ -150,11 +152,11 @@ const postShift = async (newShift) => {
       {/* Shift history */}
             <div className={`box-${theme}`} id="box2">
               <div className="shift-title">
-                <h2>Shift History</h2>
+                <h2> Past Shifts</h2>
               </div>
               <ul className="shifts-list">
                   {shiftHistory.map((shift, index) => ( // shift history
-                      <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type} <button className="general-button">Delete</button></li>
+                      <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
                   ))} 
               </ul>
             </div>
@@ -166,7 +168,7 @@ const postShift = async (newShift) => {
               </div>
               <ul className="shifts-list">
                   {upcomingShifts.map((shift,index)=> (
-                    <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type} <button className="general-button">Delete</button></li>
+                    <li key={index}>{shift.id} {new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type} <button className="general-button" onClick={() =>{deleteShift(shift.id)}}>Delete</button></li>
                   )
                   )}
               </ul>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import PortalContainer from "./containers/PortalContainer";
 import {BrowserRouter, Routes, Route, NavLink} from 'react-router-dom';
 import NotificationContainer from "./containers/NotificationContainer";
+import CalendarContainer from "./containers/CalendarContainer";
 
 
 function App() {
@@ -24,19 +25,20 @@ function App() {
     setTheme(oppositeTheme);
   }
 
+  
   // set logged in employee
-
   const setEmployeeLogin = (login) => {
     setloggedInEmployee(login)
   }
 
   // update shift to the employee id
-
   const updateShifts = (newShift) => {
     const updatedEmployee = {...loggedInEmployee};
     updatedEmployee.shifts.push(newShift);
     setloggedInEmployee(updatedEmployee)
   }
+
+  
 
   const [openSidebar, setOpenSidebar] = useState(false);
 
@@ -51,6 +53,7 @@ function App() {
       <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
       <Route path="/portal" element={<PortalContainer theme={theme} toggleTheme={toggleTheme} loggedInEmployee={loggedInEmployee} openSidebar={openSidebar} toggleSidebar={toggleSidebar} updateShifts={updateShifts}/>} />
       <Route path="/notifications" element={<NotificationContainer theme={theme} toggleTheme={toggleTheme} toggleSidebar={toggleSidebar} openSidebar={openSidebar} loggedInEmployee={loggedInEmployee} />} />
+      <Route path="/calendar" element={<CalendarContainer theme={theme} toggleTheme={toggleTheme} toggleSidebar={toggleSidebar} openSidebar={openSidebar} loggedInEmployee={loggedInEmployee} />} />
     </Routes>
     </BrowserRouter>
     </div>
