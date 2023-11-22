@@ -127,7 +127,7 @@ const PortalContainer = ({loggedInEmployee, addShift, removeShift, toggleTheme, 
     
     {/* </div> */}
 
-        {/* dark and light mode theme button */}
+    {/* dark and light mode theme button */}
         <button className="mode-btn"onClick={toggleTheme}>{theme} mode</button>
     </div>
     
@@ -160,7 +160,7 @@ const PortalContainer = ({loggedInEmployee, addShift, removeShift, toggleTheme, 
               </div>
               <ul className="shifts-list">
                   {shiftHistory.map((shift, index) => ( // shift history
-                      <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}</li>
+                      <li key={index}>{new Date(shift.date).toLocaleString("default", {month:"short"})} {new Date(shift.date).toLocaleString("default", {day:"2-digit"})} - {shift.type}<button className="general-button" onClick={() =>{deleteShift(shift.id)}}>Delete</button></li>
                   ))} 
               </ul>
             </div>
