@@ -1,9 +1,12 @@
 import { IonIcon } from '@ionic/react';
-import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
 import "../ThemeButton.css";
 import { FaBars } from "react-icons/fa";
 import Sidebar from "../components/Sidebar";
 import EmployeeCalendar from "../components/EmployeeCalendar";
+import { calendar, home, logOut, people, settingsSharp} from 'ionicons/icons';
+import { Link} from "react-scroll";
+
+
 
 const CalendarContainer = ({loggedInEmployee, toggleTheme, theme, openSidebar, toggleSidebar}) => {
 
@@ -19,19 +22,27 @@ return (<>
 
       
         <div className="logo">
-         <h1 className="logo-header" >Rainforest Retail</h1>
-         <img className="logo-image" src="/croc logo.png"></img>
-         <h1 className="logo-header" >Employee Portal</h1>
-        </div>
+        <h1 className="logo-header" >Rainforest Retail</h1>
+        <img className="logo-image" src="/croc logo.png"></img>
+        <h1 className="logo-header" >Employee Portal</h1>
+      </div>
 
-        <div className="header-icons">
-          <IonIcon icon={mailOutline}/>
-          <IonIcon icon={homeOutline}/>
-          <IonIcon icon={settingsOutline}/>    
-          <a href="/" className="logout-button"><IonIcon icon={logOutOutline}/></a>
-        </div>
+      <div className="header-icons">
+        <Link to="home-employee" spy={true} smooth={true} offset={0} duration={500} > 
+          <IonIcon icon={home}/>
+        </Link>
+
+        <Link to="home-calendar" spy={true} smooth={true} offset={-200} duration={500} > 
+          <IonIcon icon={calendar}/>
+        </Link>
+
+        <Link to="home-employee-list" spy={true} smooth={true} offset={0} duration={500} > 
+          <IonIcon icon={people} />
+        </Link>
+        <IonIcon icon={settingsSharp}/>    
+        <a href="/" className="logout-button"><IonIcon icon={logOut}/></a>
+      </div>
     
-
         {/* dark and light mode theme button */}
         <button className="mode-btn"onClick={toggleTheme}>{theme} mode</button>
         </div>
