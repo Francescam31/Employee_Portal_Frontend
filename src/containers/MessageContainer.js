@@ -1,11 +1,11 @@
-import Notifications from "../components/Notifcations";
+import Messages from "../components/Messages";
 import { IonIcon } from '@ionic/react';
 import { mailOutline, homeOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
 import "../ThemeButton.css";
 import { FaBars } from "react-icons/fa";
 import Sidebar from "../components/Sidebar";
 
-const NotificationContainer = ({loggedInEmployee, toggleTheme, theme, openSidebar, toggleSidebar}) =>{
+const MessageContainer = ({loggedInEmployee, toggleTheme, theme, openSidebar, toggleSidebar}) =>{
 
   console.log(loggedInEmployee);
   
@@ -44,7 +44,7 @@ const NotificationContainer = ({loggedInEmployee, toggleTheme, theme, openSideba
         {openSidebar &&  <Sidebar theme={theme} openSidebar={openSidebar}/>}
         </div>
 
-    <Notifications/>
+    <Messages/>
     <div>
         {/* buttons */}
         <div className="notificationButtons">
@@ -59,4 +59,4 @@ const NotificationContainer = ({loggedInEmployee, toggleTheme, theme, openSideba
     </>);
 };
 
-export default NotificationContainer;
+export default MessageContainer;

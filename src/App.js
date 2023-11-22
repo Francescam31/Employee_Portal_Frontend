@@ -3,7 +3,7 @@ import LoginForm from "./components/LoginForm";
 import { useState } from "react";
 import PortalContainer from "./containers/PortalContainer";
 import {BrowserRouter, Routes, Route, NavLink} from 'react-router-dom';
-import NotificationContainer from "./containers/NotificationContainer";
+import MessageContainer from "./containers/MessageContainer";
 import CalendarContainer from "./containers/CalendarContainer";
 
 
@@ -62,7 +62,7 @@ function App() {
     <Routes>
       <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
       <Route path="/portal" element={<PortalContainer theme={theme} toggleTheme={toggleTheme} loggedInEmployee={loggedInEmployee} openSidebar={openSidebar} toggleSidebar={toggleSidebar} addShift={addShift} removeShift={removeShift}/>} />
-      <Route path="/notifications" element={<NotificationContainer theme={theme} toggleTheme={toggleTheme} toggleSidebar={toggleSidebar} openSidebar={openSidebar} loggedInEmployee={loggedInEmployee} />} />
+      <Route path="/messages" element={<MessageContainer theme={theme} toggleTheme={toggleTheme} toggleSidebar={toggleSidebar} openSidebar={openSidebar} loggedInEmployee={loggedInEmployee} />} />
       <Route path="/calendar" element={<CalendarContainer theme={theme} toggleTheme={toggleTheme} toggleSidebar={toggleSidebar} openSidebar={openSidebar} loggedInEmployee={loggedInEmployee} />} />
     </Routes>
     </BrowserRouter>

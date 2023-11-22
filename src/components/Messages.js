@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import './Notifications.css';
 
-const Notifications = () => {
+const Messages = () => {
 
     const [message, setMessage] = useState({
         text: "We are commited to net 0 emissions by 2089",
@@ -31,4 +30,4 @@ const Notifications = () => {
     )
 }
 
-export default Notifications
+export default Messages
