@@ -5,8 +5,10 @@ import "../ThemeButton.css";
 import { FaBars } from "react-icons/fa";
 import Sidebar from "../components/Sidebar";
 
-const NotificationContainer = ({toggleTheme, theme, openSidebar, toggleSidebar}) =>{
+const NotificationContainer = ({loggedInEmployee, toggleTheme, theme, openSidebar, toggleSidebar}) =>{
 
+  console.log(loggedInEmployee);
+  
     return (<>
     {/* header and side bar */}
     <div className="portal-container">

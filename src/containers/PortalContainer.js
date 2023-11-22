@@ -13,7 +13,7 @@ import "../ThemeButton.css";
 import MonthlyWage from "../components/MonthlyWage";
 import { Link} from "react-scroll";
 
-const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme, openSidebar, toggleSidebar}) => {
+const PortalContainer = ({loggedInEmployee, addShift, removeShift, toggleTheme, theme, openSidebar, toggleSidebar}) => {
   const [shifts, setShifts] = useState([]);
   const [shiftHistory, setShiftHistory] = useState([]);
   const [upcomingShifts, setUpcomingShifts] = useState([]);
@@ -26,7 +26,7 @@ const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme, op
 
   useEffect(() => {
   fetchShifts();
-  }, []);
+  }, [shifts]);
 
   const postShift = async (newShift) => {
   newShift.employeeId = loggedInEmployee.id;
@@ -36,7 +36,7 @@ const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme, op
     body: JSON.stringify(newShift)
   })
   const savedShift = await response.json();
-  updateShifts(savedShift)
+  addShift(savedShift)
 }
 
   // deleteShift 
@@ -48,7 +48,11 @@ const PortalContainer = ({loggedInEmployee, updateShifts, toggleTheme, theme, op
       headers: {'Content-Type': 'application/json'}
     })
     // delete locally
-    updateShifts(shifts.filter((shift) => shift.id !== id));
+    // const response = await fetch("http://localhost:8080/shifts")
+    // const savedShift = await response.json();
+    // updateShifts([...savedShift])
+    // updateShifts(shifts.filter((shift) => shift.id !== id));
+    removeShift(shifts.filter((shift) => shift.id == id));
   }
 
   // shift history  
