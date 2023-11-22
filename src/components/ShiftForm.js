@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ShiftForm.css";
 
 const ShiftForm = ({postShift, loggedInEmployee}) => {
 
@@ -28,7 +29,7 @@ const ShiftForm = ({postShift, loggedInEmployee}) => {
       return(
         <div>
             <h2>Add Shifts</h2>
-            <form onSubmit={handleShiftSubmit}>
+            <form className="shift-form" onSubmit={handleShiftSubmit}>
                 <label >
                     date:
                 </label>
@@ -51,7 +52,7 @@ const ShiftForm = ({postShift, loggedInEmployee}) => {
                 <option value ="AFTERNOON">Afternoon</option>
                 <option value ="EVENING">Evening</option>
                 </select>
-                <button type="submit">Add </button>
+                <button className="button" type="submit">Add </button>
             </form>
         </div>
       )

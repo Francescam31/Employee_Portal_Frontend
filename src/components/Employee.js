@@ -1,6 +1,8 @@
 import EmployeeCalendar from "./EmployeeCalendar";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+// import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from 'moment';
+import '../Employee.css';
+
 
 const Employee = ({loggedInEmployee}) =>{
 
@@ -13,23 +15,22 @@ if(!loggedInEmployee){
 
 
 return(
-    <div className="Employee">
-        <img></img>
-        <img className="logo" src="/rainforest retail.png"></img>
-        <h4>Employee id: {loggedInEmployee.id}</h4>
-        <h3 className="Employee-name">Name: {loggedInEmployee.name}</h3>
-        <h3 className="Employee-email">Email: {loggedInEmployee.email}</h3>
-        <h3 className="Employee-department-name">Department: {loggedInEmployee.department.name}</h3>
+    <div className="employee-box">
+        <img className="user-icon" src="/user.png"></img>
+        
+        <div className="employee-info">
+
+        <h2 className="employee-name">Welcome Back {loggedInEmployee.name}</h2>
+
+        <h3 className="employee-department-name">Department: {loggedInEmployee.department.name}</h3>
+        <h4 className="employee-jobtitle">{loggedInEmployee.jobTitle}</h4>
+        
+        <div className="employee-details">
         <p>Contact Number: {loggedInEmployee.contactNumber}</p>
         <p>Wage: £{loggedInEmployee.hourlyWage}ph</p>
-        <h2>Shifts</h2>
-        <ul>
-                {loggedInEmployee.shifts.map((shift, index) => (
-                    <li key={index}>{shift.date}:{shift.type}</li>
+        </div>
         
-                ))}
-        </ul>
-        <EmployeeCalendar loggedInEmployee={loggedInEmployee} />
+    </div>
     </div>
 )
 

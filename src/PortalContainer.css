@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+.portal-container {
+    padding-top: 120px;
+    /* display: flex; */
+    font-size: larger;
+}
+
+
+.portal-background {
+    /* width: 125%;
+    height: 130%; */
+    margin-top: -50px;
+    transform: translateY(-30px); 
+    transform: translateX(-20px);
+    z-index: -1;
+    position: fixed;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+   
+}
+
+.page-header{
+    display: flex;
+}
+
+ 
+
+/* header light mode */
+.header-light {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    padding: 5px 30px;
+    padding-bottom: 15px;
+    background: rgb(190, 200, 173, 1);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* z-index: 20; */
+    
+}
+
+/* header dark mode */
+.header-dark {
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    padding: 5px 30px;
+    background: rgb(37, 38, 38);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* z-index: 20; */
+    color: white;
+    
+}
+
+.logo {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding-left: 100px; */
+    font-size: x-large;
+    margin-right: 100px;
+    border-right: 100px;
+}
+
+
+
+
+.logo-image {
+    max-width: 135px;
+    /* margin-bottom: 20px; */
+    margin-left: 20px;
+    /* border-radius:20%; */
+    padding-left: 20px;
+    padding-right: 35px;
+}
+
+.header-icons ion-icon {
+    margin-right: 10px; 
+    margin-left: 10px;
+  }
+
+.header-icons {
+    position: fixed;
+    color: rgb(85, 83, 83);
+    font-size: 2.5rem;
+    display: flex;
+    margin-left: 85%;
+
+}
+
+
+/* logout button */
+.logout-button {
+    /* position: fixed; */
+    top: 5px;
+    right: 1%;
+    /* padding: 0; */
+    /* margin: 0; */
+    color: rgb(85, 83, 83);
+}
+
+
+/* mode button  */
+
+
+
+.employee {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+}
+
+.component-tiles {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding-left: 50px;
+    
+    /* justify-content: center; */
+    /* flex-direction: column;
+    align-items: center; */
+}
+
+.shift-boxes {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* calendar light mode */
+.calendar-box-light {
+    grid-column: span 2;
+    width: 90%;
+    height: 40%;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    
+    
+}
+
+/* calendar dark mode */
+.calendar-box-dark {
+    grid-column: span 2;
+    width: 1000px;
+    /* height: 500px; */
+    background-color: rgb(136, 150, 205);
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    color: black;
+    
+}
+
+/* boxes light mode  */
+.box-light {
+    
+    width: 500px;
+    height: 500px;
+    /* /* background-color: rgba(205, 218, 182, 0.6); */
+    background-color: rgba(190, 200, 173, 0.8);
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 2px solid rgba(58, 158, 128, 0.5); */
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #000;
+    padding-left: 50px;
+    backdrop-filter: blur(6px); 
+    
+
+}
+
+/* boxes dark mode */
+
+.box-dark {
+    
+    width: 500px;
+    height: 500px;
+    background-color: rgb(37, 38, 38);;
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 2px solid rgba(58, 158, 128, 0.5); */
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #000;
+    
+
+}
+
+
+#box1 {
+    flex-grow: 1;
+}
+
+#box2 {
+    flex-grow: 2;
+}
+
+.more-boxes {
+    display: grid;
+    grid-template-columns:  2fr 1fr 1fr 1fr 1fr;
+    /* padding-left: 50px; */
+}
+
+/* team box light mode */
+.team-box-light{
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(190, 200, 173);
+    margin: 10px;
+    border-radius: 5px;
+    flex: 1;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    /* padding-left: 50px; */
+    border: 1px solid #000;
+    padding-left: 50px;
+    margin-left: 63px;
+    /* backdrop-filter: blur(5px); */
+}
+
+/* team box dark mode */
+.team-box-dark {
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(37, 38, 38);
+    margin: 10px;
+    border-radius: 5px;
+    flex: 1;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    /* padding-left: 50px; */
+    border: 1px solid #000;
+    padding-left: 50px;
+    margin-left: 63px;
+}
+
+.current-month-wage-light {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(190, 200, 173);
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 2px solid rgba(58, 158, 128, 0.5); */
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #000;
+    padding-left: 50px;
+    background-color: rgba(190, 200, 173, 0.8);
+    backdrop-filter: blur(6px); 
+}
+
+.current-month-wage-dark {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(37, 38, 38);;
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 2px solid rgba(58, 158, 128, 0.5); */
+    flex: 1;
+    box-shadow: 0 0 30px rgba(58, 158, 128, 0.5);
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+/* general button style */
+.general-button{
+    width: 5em;
+    transition: color .5s;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    margin-left: 30px;
+    /* margin-top: -20px; */
+}

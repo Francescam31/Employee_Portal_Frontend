@@ -1,23 +1,30 @@
 import {Calendar, momentLocalizer} from "react-big-calendar"
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from "moment";
-
+import "./EmployeeCalendar.css";
 
 const EmployeeCalendar = ({loggedInEmployee}) =>{
 
     const localizer = momentLocalizer(moment);
 
-
     let events = [];
     let startNumber;
     let endNumber;
-   
+
+    // const map = {
+    //   "MORNING": () => {
+    //     startNumber = 9;
+    //     endNumber = 5;
+    //   }
+    // }
+    
     for(let i= 0; i<loggedInEmployee.shifts.length; i++){
       
-
+        // map[loggedInEmployee.shifts[i].type]();
+        
         if(loggedInEmployee.shifts[i].type == "MORNING"){
           startNumber = 9;
-          endNumber = 17;
+          endNumber = 5;
         }
         if(loggedInEmployee.shifts[i].type == "AFTERNOON"){
           startNumber = 12;
@@ -25,10 +32,9 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
         }
         if(loggedInEmployee.shifts[i].type == "EVENING"){
           startNumber = 16
-          endNumber = 23
+          endNumber = 0
         }
-        
-        // ?
+
         const startTime = new Date(loggedInEmployee.shifts[i].date).setHours(startNumber);
         const endTime = new Date(loggedInEmployee.shifts[i].date).setHours(endNumber);
 
@@ -38,7 +44,6 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
           end:  new Date(endTime)
         }
         events.push(newevent);
-  
         
     } 
 
@@ -47,15 +52,13 @@ const EmployeeCalendar = ({loggedInEmployee}) =>{
     <>  
       <div className="calendar-component">
         <h2 className="calendar-title">Calendar</h2>
-        <Calendar className="calendar"
-          localizer={localizer}
-          defaultDate={new Date()}
-          defaultView="week"
-          events={events}
-          style={{ height: "50vh", width: "50vh"}}
-          min ={new Date(2023,9,1,8,0,0)}
-          max ={new Date(2023,9,1,23,0,0)}
-         />
+          <Calendar className="calendar"
+            localizer={localizer}
+            defaultDate={new Date()}
+            defaultView="month"
+            events={events}
+            style={{ height: "75vh",width: "120vh"}}
+          />
          </div>
     </>
     )

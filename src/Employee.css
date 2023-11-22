@@ -1,0 +1,25 @@
+.employee-box {
+    width: 500px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    /* flex: 1; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center
+
+}
+
+.user-icon {
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 10%;
+    
+}
+
+.employee-details {
+    padding-left: 20px;
+}
+
+
+

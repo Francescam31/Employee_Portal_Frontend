@@ -1,0 +1,66 @@
+
+/* side bar light mode  */
+.sidebar-light {
+    height: 100%;
+    width: 300px;
+    /* background-color: rgba(205, 218, 182, 0.6); */
+    background-color: rgba(190, 200, 173, 0.6);
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 50px; */
+    font-size: x-large;
+    padding: 20px;
+    padding-top: 50px;
+    margin-top: 25px;
+    backdrop-filter: blur(5px); 
+}
+
+
+.sidebar-p-light{
+    background-color: white;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: -5px 5px 10px rgb(79, 57, 57);
+}
+
+.sidebar-p-light :hover {
+    cursor: pointer;
+}
+
+.sidebar-l-light {
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+
+/* side bar dark mode */
+
+.sidebar-dark {
+    height: 100%;
+    width: 300px;
+    background-color:  rgb(37, 38, 38);
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    font-size: x-large;
+    padding: 20px;
+}
+
+
+.sidebar-p-dark {
+    background-color: black;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: -5px 5px 10px rgb(79, 57, 57);
+}
+
+.sidebar-p-dark :hover {
+    cursor: pointer;
+}
+
+.sidebar-l-dark {
+    padding-left: 40px;
+    padding-top: 20px;
+}
